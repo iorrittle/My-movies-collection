@@ -1,24 +1,53 @@
-# README
+＃テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column               | Type    | Options                    |
+| -------------------- | --------| -------------------------- |
+| email                | string  | null:false, unique: true   |
+| encrypted_password   | string  | null:false                 |
+| nickname             | string  | null:false                 |
+| genre_id             | integer | null:false                 |
 
-* Ruby version
+### Association
+- has_many :movies
+- has_many :comments  
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## movies テーブル
 
-* Database initialization
+| Column               | Type      | Options                       |
+| -------------------- | --------- | ----------------------------- |
+| title                | string    | null:false                    |
+| user                 | reference | null:false, foreign_key: true |
+| director             | string    | null:false                    |
+| starring             | string    | null:false                    |
+| genre_id             | integer   | null:false                    |
+| public_year_id       | integer   | null:false                    |
+| favorite_scene_1     | text      | null:false                    |
+| favorite_scene_2     | text      |                               |
+| favorite_scene_3     | text      |                               |
+| film_music           | string    |                               |
+| artist_name          | string    |                               |
+| memorandum           | text      | null:false                    |
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Association
+- belongs_to :user
+- has_many :comments
 
-* ...
+
+
+## comments テーブル
+
+| Column               | Type      | Options                       |
+| -------------------- | --------- | ----------------------------- |
+| content              | text      | null:false                    |
+| movie                | reference | null:false  foreign_key: true |
+| user                 | reference | null:false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :movie
