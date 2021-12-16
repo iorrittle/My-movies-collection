@@ -30,7 +30,10 @@ class Genre < ActiveHash::Base
     { id: 28, name: 'カルト' },
     { id: 29, name: 'グルメ' },
     { id: 30, name: '怪獣' },
-    
-  
   ]
-  end
+  
+  include ActiveHash::Associations
+  has_many :users
+
+
+end

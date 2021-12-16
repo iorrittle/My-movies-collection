@@ -3,10 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :genre
 
-
-  validates :name, presence: true
-  validates :genre_id, presence: true
+  validates :nickname, presence: true
+  validates :genre_id, numericality: { other_than: 1 } 
   
 
 end
