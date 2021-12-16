@@ -24,12 +24,12 @@
 
         <div class="field">
           <%= f.label :nickname, "nickname" %><br />
-          <%= f.text_field :hoge, id:"user_name" %>
+          <%= f.text_field :nickname, id:"user_name" %>
         </div>
 
         <div class="field">
-          <%#= f.label :genre_id, "好きな映画のジャンル" %><br />
-          <%#= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+          <%= f.label :genre_id, "好きな映画のジャンル" %><br />
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
         </div>
 
         
