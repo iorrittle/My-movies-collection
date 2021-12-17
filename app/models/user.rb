@@ -6,7 +6,7 @@ class User < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
-
+  has_many :movies
   validates :nickname, presence: true
   validates :genre_id, numericality: { other_than: 1 } 
   
