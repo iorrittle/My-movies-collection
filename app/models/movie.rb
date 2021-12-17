@@ -4,6 +4,7 @@ class Movie < ApplicationRecord
   belongs_to :genre
 
   validates :title ,presence: true
+  validates :image, presence: true
   validates :director ,presence: true
   validates :starring, presence: true
   validates :genre_id, presence: true
