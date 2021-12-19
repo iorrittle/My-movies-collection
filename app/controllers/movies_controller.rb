@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
   end
   
   def create
+    
   end  
 
   private

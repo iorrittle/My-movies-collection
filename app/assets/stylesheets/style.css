@@ -131,6 +131,7 @@ a {
   margin-bottom: 28px;
 }
 .card__wrapper {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

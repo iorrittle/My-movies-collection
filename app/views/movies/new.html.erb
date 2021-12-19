@@ -11,7 +11,7 @@
     <%# render 'shared/error_messages', model: f.object %>
     <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
-    <%# 商品画像 %>
+  
     <div class="img-upload">
       <div class="weight-bold-text">
         movie画像
@@ -24,8 +24,8 @@
         <%= f.file_field :image, id:"movie-image" %>
       </div>
     </div>
-    <%# /商品画像 %>
-    <%# 商品名と商品説明 %>
+   
+   
     <div class="new-movies">
       <div class="weight-bold-text">
         映画のタイトル
@@ -33,9 +33,9 @@
       </div>
       <%= f.text_area :title, class:"movies-text", id:"movie-name", placeholder:"映画のタイトル" %>
     </div>
-    <%# /商品名と商品説明 %>
+    
 
-    <%# 映画の詳細 %>
+    
     <div class="movies-detail">
       <div class="weight-bold-text">映画の詳細</div>
       <div class="form">
@@ -62,7 +62,7 @@
           映画の公開年
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"movie-public-year"}) %>
+        <%= f.collection_select(:public_year_id, PublicYear.all, :id, :name, {}, {class:"select-box", id:"movie-public-year"}) %>
         
       </div>
       <%#　感想　%>
