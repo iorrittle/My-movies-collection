@@ -38,8 +38,8 @@ a {
 
 .header {
   background-color: #3b4043;
-  margin-bottom: 48px;
-  padding: 20px 0;
+  margin-bottom: 0px;
+  padding: 0px 0;
 
 }
 .inner {
@@ -50,24 +50,27 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  
 }
 .logo {
   width: 200px;
+  object-fit: contain;
 }
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color:#87CEFA;
+  color:#fafbfc;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #fafbfc solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  margin-top: 20%;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #a5d1ec;
 }
 
 .nav__logout{
@@ -117,11 +120,48 @@ a {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+.main {
+  background: #f8f8f8;
+}             
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.image-area {
+  width: 100vw;
+  height: 310px;
+  background: url('unnamed.jpg')!important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 8vh;
+  
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+
+
+
+/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+
+
+
 
 /* メイン */
 
 .greeting{
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -131,7 +171,6 @@ a {
   margin-bottom: 28px;
 }
 .card__wrapper {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -139,8 +178,9 @@ a {
   min-height: calc(100vh - 161px);
 }
 .card {
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 50px) / 4);
   margin-bottom: 40px;
+  
 }
 .card__img {
   margin-bottom: 16px;
@@ -152,7 +192,7 @@ a {
   font-weight: bold;
 }
 .card__summary {
-  font-size: 16px;
+  font-size: 12px;
 }
 .card__user {
   display: block;
@@ -165,6 +205,9 @@ a {
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
+  
+
+
 }
 .prototype__hedding{
   font-size: 24px;

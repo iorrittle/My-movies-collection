@@ -1,13 +1,27 @@
-<main class="main">
-  <div class="inner">
-    <%if user_signed_in? %>
+
+<div class='main'>
+  <div class='image-area'>
+    <h2 class='service-title'>
+     My movies collection
+    </h2>
+    <p class='service-explain'>
+      自分が観た映画について気軽に投稿して
+    </p>
+    <p class='service-explain'>
+      自分だけのコレクションを楽しもう！
+    </p>
+  </div>
+  <div class="main">
+    <div class="inner">
+      <%if user_signed_in? %>
       <div class="greeting"> 
-        <%= "こんにちは" %>
-        <%= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
+          <%= "こんにちは" %>
+          <%= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
       </div> 
-    <% end %>
-    <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <% end %>
+      <div class="card__wrapper">
+        <%= render partial: 'movie', collection: @movies %>
+      </div>
     </div>
   </div>
-</main>
+</div>  

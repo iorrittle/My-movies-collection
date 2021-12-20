@@ -1,0 +1,20 @@
+
+<div class="card">
+  <%= link_to image_tag(movie.image.variant(resize: '500x300'), class: :card__img ), root_path%>
+  <div class="card__body">
+    <%= link_to "#{movie.title}", root_path, class: :card__title%>
+    <p class="card__summary">
+      <%= "#{movie.genre.name}" %>
+    </p>
+    <p class="card__summary">
+      <%= "#{movie.public_year.name}公開作品" %>
+    </p>
+    <p class="card__summary">
+      <%= "#{movie.director}監督" %>
+    </p>
+    <p class="card__summary">
+      <%= "#{movie.starring}主演" %>
+    </p>
+    <%= link_to "#{movie.user.nickname}のmovie", root_path, class: :card__user %>
+  </div>
+</div>
