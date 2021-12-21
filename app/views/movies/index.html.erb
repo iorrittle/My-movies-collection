@@ -12,13 +12,13 @@
     </p>
   </div>
   <div class="main">
-    <div class="inner">
-      <%if user_signed_in? %>
-      <div class="greeting"> 
+    <div class="index__inner">
+      <%#if user_signed_in? %>
+      <%#div class="greeting"> 
           <%= "こんにちは" %>
-          <%= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
-      </div> 
-      <% end %>
+          <%#= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
+      <%#/div> 
+      <%# end %>
       <div class="card__wrapper">
         <%= render partial: 'movie', collection: @movies %>
       </div>

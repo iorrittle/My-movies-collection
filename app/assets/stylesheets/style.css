@@ -42,7 +42,7 @@ a {
   padding: 0px 0;
 
 }
-.inner {
+.index__inner {
   width: 1024px;
   margin: 0 auto;
 }
@@ -50,10 +50,12 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
+  padding-right: 10%;
 }
 .logo {
   width: 200px;
+  height: 70px;
+  margin-top: 15px;
   object-fit: contain;
 }
 .nav__btn{
@@ -71,6 +73,10 @@ a {
 .nav__btn:hover{
   color: #fff;
   background: #a5d1ec;
+}
+.nav__right {
+  padding-bottom: 20px;
+
 }
 
 .nav__logout{
@@ -123,7 +129,8 @@ a {
 .main {
   background: #f8f8f8;
 }             
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+
+/*帯*/
 .image-area {
   width: 100vw;
   height: 310px;
@@ -137,7 +144,7 @@ a {
   justify-content: center;
   padding: 15vh 15vw;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 2);
 }
 
 .service-title {
@@ -153,12 +160,16 @@ a {
 
 
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+
 
 
 
 
 /* メイン */
+.inner {
+  
+
+}
 
 .greeting{
   margin-top: 20px;
@@ -176,14 +187,17 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: calc(100vh - 161px);
+  margin-top: 20px;
+  
 }
 .card {
   width: calc((100% - 50px) / 4);
-  margin-bottom: 40px;
+  padding-left: 50px;
   
 }
 .card__img {
   margin-bottom: 16px;
+  
 }
 .card__title {
   display: block;
@@ -203,45 +217,154 @@ a {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-  
+.inner {
+  display: flex;
+  justify-content: start;
+}
 
+.movie__left__wrapper {
+  min-height: calc(100vh - 161px);
+  width: 40%;
+  padding-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.movie__info {
+  min-height: calc(100vh - 161px);
+  width: 80vh;
+  padding-top: 30px;
+  
+  text-align: center;
+}
+
+
+.image__cover {
+  height: 750px;
+  border-bottom: 2px solid #f5f5f5;
+  width: 100%;
+  text-align: center;
+  padding-left: 30%;
 
 }
-.prototype__hedding{
+.movie__image {
+  object-fit: contain;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+.movie__hedding {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 30px;
+  text-decoration-line: underline;
+  
 }
-.prototype__user{
+.movie__list {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+.list__name {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  border-bottom: 1px solid #f5f5f5;
+
+}
+  
+.movie__detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.movie__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.scene__tab {
+  border: 1px #3b4043 solid;
+  background-color: #3b4043;
+  color: #f8f8f8;
+  font-size: 16px;
+  
+}
+.favorite-scene {
+  display: flex;
+  
+  justify-content: space-around;
+  padding-bottom: 10px;
+ 
+
+}
+.scene__memory {
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  height: 50px;
+  padding: 5px ;
+  border-radius: 4px;
+  border: #3b4043 1px solid;
+}
+.movie-scene {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+
+}
+
+.movie-music {
+  display: flex;
+  
+  justify-content: space-around;
+
+}
+.music__memory {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 5px ;
+  border-radius: 4px;
+  height: 50px;
+  border: #3b4043 1px solid;
+}
+.memorandum-text {
+  width: 100%;
+  height: 150px;
+  text-align: left;
+  border: #3b4043 1px solid;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+
+.movie__user{
   display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
   text-decoration: underline;
 }
-.prototype__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.prototype__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
-}
-.prototype__manage{
+
+
+
+
+
+
+
+
+.movie__manage {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
-.prototype__btn{
+.movie__btn {
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
@@ -253,34 +376,34 @@ a {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.prototype__btn:hover{
+.movie__btn:hover {
   color: #fff;
   background: #999;
 }
 
-.prototype__comments{
+.movie__comments {
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
 
-.comments_lists{
+.comments_lists {
   padding-left: 20px;
 }
 
-.comments_list{
+.comments_list {
   list-style-type: square;
   padding-bottom: 5px;
 }
 
-.comment_user{
+.comment_user {
   font-size: 16px;
   color: #999;
   text-decoration: underline;
 }
 
 /* ユーザーページ */
-.user__wrapper{
+.user__wrapper{ 
   min-height: calc(100vh - 161px);
 }
 .table{
