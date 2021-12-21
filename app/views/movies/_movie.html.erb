@@ -15,6 +15,6 @@
     <p class="card__summary">
       <%= "#{movie.starring}主演" %>
     </p>
-    <%= link_to "#{movie.user.nickname}のmovie", root_path, class: :card__user %>
+    <%= link_to "#{movie.user.nickname}のmovie", "/users/#{movie.user.id}", class: :card__user %>
   </div>
 </div>
