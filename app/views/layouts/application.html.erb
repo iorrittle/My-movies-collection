@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>My movie collection</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,10 +17,11 @@
           <div class="nav__left">
           <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :logo), root_path %>
           </div>
+            <%= link_to image_tag("4a80ece0ca2d78b0f14f078267d752dd.png", class: :logo), root_path %>  
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "New Proto", root_path, class: :nav__btn %>
+              <%= link_to "Up Movie", new_movie_path, class: :nav__btn %>
             </div>
           
           <% else %>
@@ -32,9 +33,11 @@
         </div>
       </div>
     </header>
+    
     <%= yield %>
+    
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">Copyright my movies collection All rights reserved.</p>
     </footer>
   </body>
 </html>
