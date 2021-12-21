@@ -1,0 +1,42 @@
+/* ユーザーページ */
+.collection-inner {
+  min-height: calc(100vh - 480px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: url('unnamed.jpg');
+  background-size: cover;
+  background-position: top ;
+  flex-direction: column;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.collection-heading {
+  width: calc(100vh - 100px);
+  min-height: 30%;
+  font-size: 30px;
+
+}
+
+
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+/* フッター */
+
+.footer {
+  background-color: #3b4043;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
