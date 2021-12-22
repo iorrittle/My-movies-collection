@@ -1,11 +1,11 @@
-<div class="movies-contents">
-  <header class="movies-header">
+<div class="rooms-contents">
+  <header class="rooms-header">
     <%#= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
 
   </header>
-  <div class="movies-main">
-    <h2 class="movies-title">映画の情報を入力</h2>
-    <%= form_with model:@movie, url: movies_path,local: true do |f| %>
+  <div class="rooms-main">
+    <h2 class="roooms-title">映画の情報を入力</h2>
+    <%= form_with model:@room, url: rooms_path,local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     <%# render 'shared/error_messages', model: f.object %>
@@ -21,34 +21,34 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"movie-image" %>
+        <%= f.file_field :image, id:"room-image" %>
       </div>
     </div>
    
    
-    <div class="new-movies">
+    <div class="new-rooms">
       <div class="weight-bold-text">
         映画のタイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"movies-text", id:"movie-name", placeholder:"映画のタイトル" %>
+      <%= f.text_area :title, class:"rooms-text", id:"room-name", placeholder:"映画のタイトル" %>
     </div>
     
 
     
-    <div class="movies-detail">
+    <div class="rooms-detail">
       <div class="weight-bold-text">映画の詳細</div>
       <div class="form">
         <div class="weight-bold-text">
           監督
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :director, class:"movies-text", id:"movie-director" %>
+        <%= f.text_area :director, class:"rooms-text", id:"room-director" %>
         <div class="weight-bold-text">
           主演
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :starring, class:"movies-text", id:"movie-starring" %>
+        <%= f.text_area :starring, class:"rooms-text", id:"room-starring" %>
       </div>
     
     
@@ -57,12 +57,12 @@
           映画のジャンル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"room-genre"}) %>
         <div class="weight-bold-text">
           映画の公開年
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:public_year_id, PublicYear.all, :id, :name, {}, {class:"select-box", id:"movie-public-year"}) %>
+        <%= f.collection_select(:public_year_id, PublicYear.all, :id, :name, {}, {class:"select-box", id:"room-public-year"}) %>
         
       </div>
       <%#　感想　%>
@@ -70,15 +70,15 @@
       
     </div>    
     <%# 下部ボタン %>
-    <div class="up-btn-contents">
-      <%= f.submit "up movie" ,class:"up-btn" %>
+    <div class="rooms-up-btn-contents">
+      <%= f.submit "up room" ,class:"rooms-up-btn" %>
       <%=link_to 'back', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
   </div>
   <% end %>
 
-  <footer class="movies-footer">
+  <footer class="rooms-footer">
     
     <p class="inc">
      <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :logo), root_path %>

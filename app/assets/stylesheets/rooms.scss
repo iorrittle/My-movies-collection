@@ -1,7 +1,7 @@
 /* border-bottom: 1px solid #eee; */
 
 
-.movies-contents {
+.rooms-contents {
   background-color: #f5f5f5;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
@@ -11,12 +11,12 @@
   min-width: 500px;
 }
 
-.movies-header {
+.rooms-header {
   padding: 5vh 0;
   text-align: center;
 }
 
-.movies-main {
+.rooms-main {
   
   background-color: #aaa;
   width: 70vw;
@@ -24,7 +24,7 @@
   padding: 10vh 15vw;
 }
 
-.movies-title {
+.rooms-title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -64,22 +64,9 @@
   padding-left: 20px;
 }
 
-.question {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: #0099e8;
-  color: #FFF;
-  font-size: 13px;
-  text-align: center;
-  line-height: 20px;
-  text-decoration: none;
-  margin-left: 5px;
-}
 
-.question-text {
-  display: flex;
-}
+
+
 
 /* /共通 */
 
@@ -103,11 +90,11 @@
 
 
 /* 映画情報 */
-.new-movies {
+.new-rooms {
   padding: 2vh 0;
 }
 
-.movies-text {
+.rooms-text {
   width: 100%;
   
   padding: 16px 16px 8px;
@@ -116,7 +103,7 @@
   resize: none;
 }
 
-.movies-explain {
+.rooms-explain {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -134,7 +121,7 @@
   padding: 2vh 0;
 }
 
-.movies-detail>.form {
+.rooms-detail>.form {
   width: 300px;
   padding: 2vh 0;
 }
@@ -179,12 +166,12 @@
 /* /注意書き */
 
 /* 下部ボタン */
-.up-btn-contents {
+.rooms-up-btn-contents {
   width: 100%;
   text-align: center;
 }
 
-.up-btn {
+.rooms-up-btn {
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
@@ -204,7 +191,7 @@
 
 /* /下部ボタン */
 
-.movies-footer {
+.rooms-footer {
   background-color: #f5f5f5;
   width: 60vw;
   padding: 3ch 0;
@@ -214,7 +201,7 @@
 }
 
 
-.movies-footer>.menu {
+.rooms-footer>.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

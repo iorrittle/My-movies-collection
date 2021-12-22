@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "movies#index"
   resources :movies 
   resources :rooms do
-    resources :comments, only: :create
+    resources :comments, only: [:index, :create]
   end
   resources :users, only: :show
 end
