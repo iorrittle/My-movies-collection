@@ -1,10 +1,10 @@
 /* ユーザーページ */
 .collection-inner {
-  min-height: calc(100vh - 480px);
+  min-height: calc(100vh - 430px);
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
+  
+  text-align: left;
   background: url('unnamed.jpg');
   background-size: cover;
   background-position: top ;
@@ -18,7 +18,7 @@
   width: calc(100vh - 100px);
   min-height: 30%;
   font-size: 30px;
-
+  font-family: 'Corben', cursive;
 }
 
 
@@ -28,15 +28,4 @@
   justify-content: space-between;
   align-items: center;
   
-}
-/* フッター */
-
-.footer {
-  background-color: #3b4043;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
 }

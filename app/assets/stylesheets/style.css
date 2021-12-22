@@ -148,13 +148,16 @@ a {
 }
 
 .service-title {
-  font-size: 8vh;
-  
+  font-size: 6vh;
+  font-family: 'Corben', cursive;
+
+
 }
 
 .service-explain {
   font-size: 2.5vh;
   line-height: 40px;
+  
 }
 
 
@@ -173,6 +176,7 @@ a {
 
 .greeting{
   margin-top: 20px;
+  font-size: 20px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -199,8 +203,8 @@ a {
 }
 .card {
   width: calc((100% - 50px) / 4);
- 
-  
+  margin-bottom: 20px;
+
 }
 .card__img {
   margin-bottom: 16px;
@@ -213,6 +217,7 @@ a {
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+  text-decoration-line: underline;
 }
 .card__summary {
   font-size: 12px;
@@ -279,11 +284,12 @@ a {
   text-align: center;
 }
 .list__name {
-  width: 100%;
+  width: 300px;
   height: 30px;
   font-size: 16px;
   border-bottom: 1px solid #f5f5f5;
-
+  margin-left: 40px;
+  
 }
   
 .movie__detail {
@@ -343,14 +349,22 @@ a {
   border-radius: 4px;
   height: 50px;
   border: #3b4043 1px solid;
+  resize: none;
 }
 .memorandum-text {
   width: 100%;
-  height: 150px;
+  
   text-align: left;
   border: #3b4043 1px solid;
   font-size: 14px;
   border-radius: 8px;
+  
+  
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  
+  font-size: 16px;
+  resize: none;
 }
 
 
@@ -411,7 +425,17 @@ a {
   color: #999;
   text-decoration: underline;
 }
+/* フッター */
 
+.footer {
+  background-color: #3b4043;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
 
 
 /* タブレット対応 */
