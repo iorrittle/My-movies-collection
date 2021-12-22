@@ -54,10 +54,16 @@
       </div>
       <% if user_signed_in? && current_user.id == @movie.user_id %>
         <div class="movie__manage">
-          <%= link_to '編集する', edit_movie_path(@movie.id), method: :get, class: :movie__btn %>
-          <%= link_to '削除する', movie_path(@movie.id), method: :delete, class: :movie__btn %>
+        
+          <div class="movie__btn">
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '編集する', edit_movie_path(@movie.id), method: :get ,class: "edit-text"%>
+          </div>
+          <div class="movie__btn">
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', movie_path(@movie.id), method: :delete,class: "edit-text"%>
+          </div>
         </div>
       <% end %>
+    
       <%#div class="movie__comments">
         <%#% if user_signed_in?  %>  
           <%#= form_with model: [@prototype, @comment],local: true do |f|%>
@@ -84,7 +90,7 @@
     
     
     
-    </div>  
+    
           <%# if user_signed_in? && current_user.id == @movie.user_id %>
          <%#div class="movie__manage">
           <%#= link_to '編集する', edit_prototype_path(@prototype.id), method: :get, class: :prototype__btn %>
