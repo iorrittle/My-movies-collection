@@ -18,7 +18,10 @@
           <div class="nav__left">
           <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :logo), root_path %>
           </div>
-            
+          <div class="nav__center"> 
+            <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+            <%= link_to "My collection" ,root_path,class: "center__text" %>
+          </div>
           <% if user_signed_in? %>
             <div class="nav__right">
              

@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "movies#index"
   resources :movies 
   resources :users, only: :show
+  resources :rooms, only: :new
 end

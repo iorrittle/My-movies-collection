@@ -74,6 +74,18 @@ a {
   color: #fff;
   background: #a5d1ec;
 }
+.nav__center {
+  width: 60vh;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.center__text {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Corben', cursive;
+}
 .nav__right {
   padding-bottom: 20px;
 
