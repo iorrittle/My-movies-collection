@@ -1,8 +1,120 @@
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h2 class="page-heading">プロトタイプ編集</h2>
-      <%= render partial: "form", locals: { prototype: @prototype } %>
+<div class="movies-contents">
+  <header class="movies-header">
+    <%#= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="movies-main">
+    <h2 class="movies-title">映画の情報を編集</h2>
+    <%= form_with model: @movie, url: movie_path(@movie.id), local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%# render 'shared/error_messages', model: f.object %>
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+  
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        movie画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"movie-image" %>
+      </div>
     </div>
+   
+   
+    <div class="new-movies">
+      <div class="weight-bold-text">
+        映画のタイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"movies-text", id:"movie-name", placeholder:"映画のタイトル" %>
+    </div>
+    
+
+    
+    <div class="movies-detail">
+      <div class="weight-bold-text">映画の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          監督
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :director, class:"movies-text", id:"movie-director" %>
+        <div class="weight-bold-text">
+          主演
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :starring, class:"movies-text", id:"movie-starring" %>
+      </div>
+    
+    
+      <div class="form">
+        <div class="weight-bold-text">
+          映画のジャンル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %>
+        <div class="weight-bold-text">
+          映画の公開年
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:public_year_id, PublicYear.all, :id, :name, {}, {class:"select-box", id:"movie-public-year"}) %>
+        
+      </div>
+      <%#　感想　%>
+      <div class="form">
+        <div class="weight-bold-text">
+          お気に入りシーン No.1
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :favorite_scene_1, class:"movies-text", id:"movie-favorite-scene" %>
+        <div class="weight-bold-text">
+          お気に入りシーン No.2
+        </div>
+        <%= f.text_area :favorite_scene_2, class:"movies-text", id:"movie-favorite-scene" %>
+        <div class="weight-bold-text">
+          お気に入りシーン No.3
+        </div>
+        <%= f.text_area :favorite_scene_3, class:"movies-text", id:"movie-favorite-scene" %>
+      </div> 
+    </div>    
+      <div class="film-music">
+        <div class="film-music-title">
+          イチオシしの映画音楽
+        </div>
+      <h5>　タイトル</h5>
+        <%= f.text_area :film_music, class:"film-music-text", id:"movie-music-title" %>
+      <h5> アーティスト</h5>
+        <%= f.text_area :artist_name, class:"film-music-text", id:"movie-music-artist" %>
+      </div>
+      
+     <%# /memorandum %>
+        <div class="movies-explain">
+        <div class="weight-bold-text">
+          この映画の魅力とは！
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :memorandum, class:"movies-explain", id:"movie-info", placeholder:"この映画について感じたことを自由にご記入ください（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    
+   
+    <%# 下部ボタン %>
+    <div class="up-btn-contents">
+      <%= f.submit "edit movie" ,class:"up-btn" %>
+      <%=link_to 'back', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
   </div>
+  <% end %>
+
+  <footer class="movies-footer">
+    
+    <p class="inc">
+     <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :logo), root_path %>
+    </p>
+  </footer>
 </div>
