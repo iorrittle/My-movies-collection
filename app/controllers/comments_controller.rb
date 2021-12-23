@@ -1,17 +1,22 @@
 class CommentsController < ApplicationController
   
-  def index
-    
-    @rooms = Room.all
-    @room = Room.find(params[:room_id])
-
-  end  
+  
   
   
   def create
-    Comment.create(comment_params)
-    redirect_to #"/rooms/#{comment.room.id}"  
+    @comment = Comment.create(comment_params)
+    if @comment.save
+      redirect_to room_path(@comment.room)  
+  
+    else
+      @room = @comment.room
+      @comments = @room.comments
+      render "rooms/show" 
+    end
   end
+  
+  def show
+  end  
 
   private
   def comment_params
