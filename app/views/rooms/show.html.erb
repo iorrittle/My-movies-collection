@@ -22,27 +22,29 @@
   </div> 
 
   <div class="chat__area">
-   <div class="room__heading__name">Movie chat</div>
-   <%= form_with model: [@room, @comment],local: true do |f|%>
-    <%= f.text_field :content %>
-    <%= f.submit '投稿する' , id: "submit" %>
-  <% end %>
-
-    <div id="list">
-    </div>
- 
- 
-  
-   
-    <% @comments.each do |comment| %>
-    <div class="post">
-      <div class="post-date">
-        投稿日時：<%= comment.created_at %>
-      </div>
-      <div class="post-content">
-        <%= comment.content %>
-      </div>
+    <div class="room__heading__name">Movie chat</div>
+    <%= form_with model: [@room, @comment],　id:"form",　local: true do |f|%>
+    <div class="comment__field">
+      <%= f.text_field :content ,id:"comment__content"%>
+      <%= f.submit '投稿する' ,class:"comment__submit", id: "comment-submit" %><i class="fas fa-pencil-alt"></i>
+      
     </div>
     <% end %>
+
+    
+  
+   
+      <% @comments.each do |comment| %>
+      <div class="content">
+        <div class="comennt-date">
+          投稿日時：<%= comment.created_at %>
+        </div>
+        <div class="comment-content">
+          <%= comment.content %>
+          <%= link_to "#{comment.user.nickname}","/users/#{comment.user.id}", class: :comment_user %>
+        </div>
+      </div>
+    <% end %>
+    
   </div>
 </div>
