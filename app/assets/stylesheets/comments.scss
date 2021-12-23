@@ -1,3 +1,32 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* リセットCSS */
+/* ユーザーページ */
+.collection-inner {
+  min-height: calc(100vh - 430px);
+  display: flex;
+  justify-content: space-around;
+  
+  text-align: left;
+  background: url('unnamed.jpg');
+  background-size: cover;
+  background-position: top ;
+  flex-direction: column;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.collection-heading {
+  width: calc(100vh - 100px);
+  min-height: 30%;
+  font-size: 30px;
+  font-family: 'Corben', cursive;
+}
+
+
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}

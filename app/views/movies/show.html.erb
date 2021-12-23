@@ -64,75 +64,19 @@
         </div>
       <% end %>
     
-      <%#div class="movie__comments">
-        <%#% if user_signed_in?  %>  
-          <%#= form_with model: [@prototype, @comment],local: true do |f|%>
-            <%#div class="field">
-              <%= f.label :content, "コメント" %><%#br />
-              <%#= f.text_field :content, id:"comment_content" %>
-            <%#/div>
-            <%#div class="actions">
-              <%= f.submit "送信する", class: :form__btn  %>
-            <%#/div>
-          <%# end %>
-        <%# end %>
-        <%#ul class="comments_lists">
-          <% @comments.each do |comment| %>
-            <%#li class="comments_list">
-              <%= comment.content %>
-              <%#= link_to "#{comment.user.name}","/users/#{comment.user.id}", class: :comment_user %>
-            <%#/li> 
-          <% end %>
-    
-    
-    
-    
-    
-    
-    
-    
-          <%# if user_signed_in? && current_user.id == @movie.user_id %>
-         <%#div class="movie__manage">
-          <%#= link_to '編集する', edit_prototype_path(@prototype.id), method: :get, class: :prototype__btn %>
-          <%#= link_to '削除する', prototype_path(@prototype.id), method: :delete, class: :prototype__btn %>
-         
-         <%# end %>
       
-     
-        <%#div class="movie__detail">
-          <p class="detail__title">キャッチコピー</p>
-          <p class="detail__message">
-            <%#= "#{@movie.director}" %>
-          <%#/p>
-        </div>
-        <div class="movie__detail">
-          <p class="detail__title">コンセプト</p>
-          <p class="detail__message">
-            <%#= "#{@prototype.concept}" %>
-          <%#/p>
-        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+          
       
       </div>
-      <%#div class="movie__comments">
-        <%#% if user_signed_in?  %>  
-          <%#= form_with model: [@prototype, @comment],local: true do |f|%>
-            <%#div class="field">
-              <%= f.label :content, "コメント" %><%#br />
-              <%#= f.text_field :content, id:"comment_content" %>
-            <%#/div>
-            <%#div class="actions">
-              <%= f.submit "送信する", class: :form__btn  %>
-            <%#/div>
-          <%# end %>
-        <%# end %>
-        <%#ul class="comments_lists">
-          <% @comments.each do |comment| %>
-            <%#li class="comments_list">
-              <%= comment.content %>
-              <%#= link_to "#{comment.user.name}","/users/#{comment.user.id}", class: :comment_user %>
-            <%#/li> 
-          <% end %>
-       
+      
       
   </div>
 </main>

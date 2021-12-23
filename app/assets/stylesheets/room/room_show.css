@@ -1,0 +1,99 @@
+
+.chat__main {
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+.room__left__wrapper {
+  min-height: calc(100vh - 200px);
+  width: 100vh;
+  padding-top: 50px;
+  
+  
+}
+
+
+
+.room__image__cover {
+  height: 750px;
+  border-bottom: 2px solid #f5f5f5;
+  width: 100%;
+  text-align: center;
+  padding-left: 50px;
+  
+
+
+}
+.room__image {
+  object-fit: contain;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  
+  
+}
+.room__heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration-line: underline;
+  
+}
+.room__list {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  
+}
+.room__list__name {
+  
+  height: 30px;
+  font-size: 12px;
+  border-bottom: 1px solid #f5f5f5;
+  
+  
+}
+
+.chat__area {
+  width: 100%;
+  
+  background-color: lightgray;
+  padding-left: 20px;
+}
+
+.room__heading__name {
+  text-shadow:  0 0 1.5px rgba(0, 0, 0, 0.9);
+  font-size: 30px;
+  width: 300px;
+  text-decoration-line: underline;
+  
+ }
+.comment__field {
+  font-size: 20px;
+  
+  display: flex;
+  justify-content: last baseline;
+  padding-top: 50px;
+  
+}
+.comment__submit {
+  color: #f5f5f5;
+  font-size: 16px;
+  background-color: black;
+
+}
+.comennt-date {
+  font-size: 8px;
+  color: rgb(66, 65, 65);
+
+}
+.content {
+  
+  width: 60vh;
+  margin-top: 20px;
+  background-color: lightblue;
+  font-size: 16px;
+}

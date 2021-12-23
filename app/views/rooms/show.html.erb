@@ -1,0 +1,50 @@
+
+<div class="chat__main">
+
+  <div class="room__left__wrapper"> 
+
+      <div class="room__image__cover">
+        <%= image_tag @room.image, class: "room__image" %>
+       
+        <div class="room__heading">
+          <%= "#{@room.title}"%>
+        </div>
+          <div class="room__list">
+            
+            <p class="room__list__name"><%= "#{@room.director} / 監督" %></p>
+            <p class="room__list__name"><%= "#{@room.starring} / 主演" %></p>
+            <p class="room__list__name"><%= "ジャンル/#{@room.genre.name}  " %></p>
+            <p class="room__list__name"><%= "#{@room.public_year.name} 公開作品 " %></p>
+          </div>
+        
+      
+      </div>
+  </div> 
+
+  <div class="chat__area">
+    <div class="room__heading__name">Movie chat</div>
+    <%= form_with model: [@room, @comment],　local: true do |f|%>
+    <div class="comment__field">
+      <%= f.text_field :content ,id:"comment__content"%>
+      <%= f.submit '投稿する' ,class:"comment__submit", id: "comment-submit" %><i class="fas fa-pencil-alt"></i>
+      
+    </div>
+    <% end %>
+
+    
+  
+   
+      <% @comments.each do |comment| %>
+      <div class="content">
+        <div class="comennt-date">
+          投稿日時：<%= comment.created_at %>
+        </div>
+        <div class="comment-content">
+          <%= comment.content %>
+          <%= link_to "#{comment.user.nickname}","/users/#{comment.user.id}", class: :comment_user %>
+        </div>
+      </div>
+    <% end %>
+    
+  </div>
+</div>

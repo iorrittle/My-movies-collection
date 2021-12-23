@@ -74,6 +74,18 @@ a {
   color: #fff;
   background: #a5d1ec;
 }
+.nav__center {
+  width: 60vh;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.center__text {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Corben', cursive;
+}
 .nav__right {
   padding-bottom: 20px;
 
@@ -160,19 +172,8 @@ a {
   
 }
 
-
-
-
-
-
-
-
-
 /* メイン */
-.inner {
-  
 
-}
 
 .greeting{
   margin-top: 20px;
@@ -180,6 +181,7 @@ a {
 }
 .greeting__link{
   text-decoration: underline;
+  color: #999;
 }
 .page-heading {
   font-size: 30px;

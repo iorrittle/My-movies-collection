@@ -1,0 +1,13 @@
+class CreateRooms < ActiveRecord::Migration[6.0]
+  def change
+    create_table :rooms do |t|
+      t.string     :title,       null: false
+      
+      t.string     :director,    null: false
+      t.string     :starring,    null: false
+      t.integer    :genre_id,    null: false
+      t.integer    :public_year_id,  null: false
+      t.timestamps
+    end
+  end
+end

@@ -45,7 +45,6 @@
 | Column               | Type      | Options                       |
 | -------------------- | --------- | ----------------------------- |
 | content              | text      | null:false                    |
-| movie                | reference | null:false  foreign_key: true |
 | user                 | reference | null:false, foreign_key: true |
 
 ### Association

@@ -16,6 +16,10 @@
         <%= render partial: "movies/movie", collection: @user.movies %>
       </div>
     </div>
+    
+    <% if  current_user.id == 1 %>
+    　<%=link_to "make room", new_room_path %>
+    <% end %>
 </div>    
       
     
