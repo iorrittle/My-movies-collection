@@ -1,0 +1,21 @@
+
+
+<h1>Movie chat</h1>
+<%#= form_with model: [@room, @comment], local: true do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' , id: "submit" %>
+<% end %>
+
+<div id="list">
+</div>
+
+<% @comment.each do |comment| %>
+<div class="post">
+  <div class="post-date">
+    投稿日時：<%= comment.created_at %>
+  </div>
+  <div class="post-content">
+    <%= comment.content %>
+  </div>
+</div>
+<% end %>
