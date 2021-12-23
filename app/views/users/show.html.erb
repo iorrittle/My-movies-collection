@@ -17,8 +17,9 @@
       </div>
     </div>
     
-    
-    <%=link_to "make room", new_room_path %>
+    <% if  current_user.id == 1 %>
+    　<%=link_to "make room", new_room_path %>
+    <% end %>
 </div>    
       
     

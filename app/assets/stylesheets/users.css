@@ -30,3 +30,18 @@
   align-items: center;
   
 }
+/*ログインページ*/
+.session__inner {
+  height: 100vh;
+
+}
+.session__wrapper {
+  margin-left: 20%;
+
+}
+.login-heading {
+  text-shadow:  0 0 1.5px rgba(0, 0, 0, 0.9);
+  font-size: 30px;
+  width: 300px;
+  margin-top: 50px;
+}

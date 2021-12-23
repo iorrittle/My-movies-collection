@@ -23,7 +23,7 @@
 
   <div class="chat__area">
     <div class="room__heading__name">Movie chat</div>
-    <%= form_with model: [@room, @comment],　id:"form",　local: true do |f|%>
+    <%= form_with model: [@room, @comment],　local: true do |f|%>
     <div class="comment__field">
       <%= f.text_field :content ,id:"comment__content"%>
       <%= f.submit '投稿する' ,class:"comment__submit", id: "comment-submit" %><i class="fas fa-pencil-alt"></i>
