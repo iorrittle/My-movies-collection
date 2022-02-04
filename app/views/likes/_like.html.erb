@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+ <% if current_user.liked_by?(movie.id) %>
+    <td>
+      <%= link_to destroy_like_path(@movie), method: :DELETE, remote: true  do%> 
+      <i class="fas fa-bowling-ball"></i>
+    <% end %>
+      <%= movie.likes.count %>
+    </td>
+  <% else %>
+    <td>
+      <%= link_to create_like_path(movie.id), method: :POST, remote: true do %> 
+      <i class="fas fa-bowling-ball"></i>
+    <% end %> 
+      <%= movie.likes.count %>
+   
+    </td>
+    
+ <% end %>
+<% end %>

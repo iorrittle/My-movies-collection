@@ -19,6 +19,9 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @like = Like.new
+    #@likes_count = Like.where(movie_id: @movie.id).count
+    #@likes = @movie.likes.includes(:user)
   end  
 
   def edit
@@ -38,7 +41,9 @@ class MoviesController < ApplicationController
     @movie.destroy
     redirect_to root_path
   end
-
+  def likes
+    @like_movies = current_user.like_movies.includes(:user).order(created_at: :desc)
+  end 
 
   private
 
