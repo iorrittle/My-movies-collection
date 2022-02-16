@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :like_movies, through: :likes, source: :movie
   validates :nickname, presence: true
   validates :genre_id, numericality: { other_than: 1 } 
-  def liked_by?(movie_id)
+  def like_find(movie_id)
     likes.where(movie_id: movie_id).exists?
   end
   

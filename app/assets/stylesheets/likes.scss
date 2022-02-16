@@ -2,11 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .like-btn {
-  font-size: 20px;
-  color: #808080;
+  display: inline;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color:  #fff;
+  text-decoration: none;
+  user-select: none;
+  
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+  text-align: center;
+  background-color: black;
+
+  
  }
- 
+ .like-btn:hover {
+  background: #a5d1ec;
+
+ }
  .unlike-btn {
-  font-size: 20px;
-  color: #e54747;
+  display: inline;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color:dimgrey;
+  text-decoration: none;
+  user-select: none;
+  
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+  text-align: center;
+  background-color:lightgray;
+ }
+
+.unlike-btn:hover {
+  
+  background:#fff;
+}
+ .btn-danger {
+  font-size: 0.4em;
+  color:dimgrey;
+
  }

@@ -4,8 +4,8 @@ class Movie < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
   belongs_to :public_year
-  has_many :likes
-  #has_many :users, through: :likes
+  has_many :likes, dependent: :destroy
+  has_many :likes_users, through: :likes, source: :user
   validates :title ,presence: true
   validates :image, presence: true
   validates :director ,presence: true
@@ -17,6 +17,9 @@ class Movie < ApplicationRecord
   validates :genre_id, numericality:{ other_than: 1, message: "can't be blank"}
   validates :public_year_id, numericality:{ other_than: 1, message: "can't be blank"}
   
+  def liked_by(user)
+    Like.find_by(user_id: user.id, movie_id: id)
+  end
   
 
 end

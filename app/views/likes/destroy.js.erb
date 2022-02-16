@@ -1,1 +1,2 @@
-$('#likes_buttons_<%= @movie.id %>').html("<%= j(render partial: 'likes/like', locals: {movie: @movie}) %>");
+
+document.getElementById("like_buttons_<%= @movie.id %>").innerHTML = '<%= j(render partial: 'likes/like', locals: { movie: @movie}) %>'

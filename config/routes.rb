@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
   #post "likes/:movie_id/create" => "likes#create"
   #post "likes/:movie_id/destroy" => "likes#destroy"
-  resources :movies 
-    
-  #resources :likes, only: [:create, :index, :show, :destroy]
+  resources :movies do
+    resources :likes, only: [:create, :index, :show, :destroy]
+  end  
   
   resources :rooms do
     resources :comments, only: [:index, :create]
@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   
   
   
-  resources :users, only: :show
+  resources :users do
+    member do
+      get :likes
+    end
+  end  
 end

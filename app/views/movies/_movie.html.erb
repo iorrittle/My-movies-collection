@@ -15,18 +15,11 @@
     <p class="card__summary">
       <%= "#{movie.starring}主演" %>
     </p>
-    <div id="likes_buttons_<%= movie.id %>">
-    <%= render partial: 'likes/like', locals: {movie: movie} %>
     
+    <div id="like_buttons_<%= movie.id %>">
+      <%= render partial: 'likes/like', locals: { movie: movie} %>
+     
     </div>
-    <%#div class="like__click">
-      <%#= form_with model: @like, url: create_like_path(movie), method: :post ,local: true do |f| %>
-      <%#= f.hidden_field :movie_id, value: movie.id %>
-      <%#= f.submit 'watched', class: "input"%>
-              
-      <%#end %> 
-      <%#= @likes_count %>  
-    
     
     
      <%= link_to "#{movie.user.nickname}のmovie", "/users/#{movie.user.id}", class: :card__user %>

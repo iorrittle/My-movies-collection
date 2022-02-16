@@ -79,7 +79,10 @@ a {
   text-align: center;
   padding-top: 30px;
 }
+.fa-comment-dots {
+  color: #f5f5f5;
 
+}
 .center__text {
   color: #fff;
   font-size: 20px;
@@ -474,7 +477,7 @@ a {
     width: 48%;
     margin-bottom: 40px;
   }
-  .prototype_image{
+  .movie_image{
     width: 60%;
   }
 }
@@ -497,7 +500,7 @@ a {
   .card__summary {
     font-size: 14px;
   }
-  .prototype_image{
+  .movie_image{
     width: 100%;
   }
   .table{

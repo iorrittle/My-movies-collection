@@ -19,10 +19,16 @@
       <div class="greeting"> 
           <%= "Hello" %>
           <%= link_to "#{current_user.nickname}","/users/#{current_user.id}" , class: :greeting__link%>
+          <div class="watch__list">
+          <%= link_to "#{current_user.nickname}'s watchリスト","/users/#{current_user.id}/likes",class: :greeting__link%>
+          </div>
       </div> 
       <% end %>
       <div class="card__wrapper">
-        <%= render partial: 'movie', collection: @movies %>
+        
+          <%= render partial: 'movie', collection: @movies %>
+        
+        
       </div>
     </div>
   </div>

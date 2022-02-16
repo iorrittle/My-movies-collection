@@ -1,0 +1,26 @@
+<div class="main">
+  <div >
+    
+      <div class="collection-heading">
+        <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+        <%= "#{@user.nickname}'s  watch lists" %>
+      </div>
+      
+    
+  </div>
+</div>
+<div class="main">
+    <div class="index__inner">
+    
+      <div class="card__wrapper">
+      
+        <%= render partial: "movies/movie", collection: @like_movies %>
+     
+      </div>
+      
+        
+    
+    </div>
+    
+    
+</div>    
