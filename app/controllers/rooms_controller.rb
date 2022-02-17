@@ -5,13 +5,13 @@ class RoomsController < ApplicationController
   
   def new
     @room = Room.new
+    ld
   end
   
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to root_path
-    else
+      redirect_to room_path(@room.id)
       render :new
     end
   end  
@@ -22,7 +22,25 @@ class RoomsController < ApplicationController
     @comments = @room.comments.includes(:user)
 
   end
+  def edit
+    @room = Room.find(params[:id])
+    
+  end
+  def update
+    @room = Room.find(params[:id])
+    if @room.update(room_params)
+      redirect_to room_path(@room.id)
+    else 
+      render :edit
+    end
+  end  
+  
+  def destroy
+    @room = Room.find(params[:id])
+    @room.destroy
+    redirect_to root_path
 
+  end  
   private
 
   def room_params
