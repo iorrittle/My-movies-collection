@@ -20,11 +20,10 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
-    #@like = Like.new
-    @like = current_user.likes.find_by(movie_id: @movie.id)
-    
-    #@likes_count = Like.where(movie_id: @movie.id).count
-    @likes = @movie.likes.includes(:user)
+    if user_signed_in?
+      @like = current_user.likes.find_by(movie_id: @movie.id)
+      @likes = @movie.likes.includes(:user)
+    end  
   end  
 
   def edit

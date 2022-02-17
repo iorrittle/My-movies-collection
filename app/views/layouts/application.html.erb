@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My movie collection</title>
     <%= csrf_meta_tags %>
@@ -13,16 +14,52 @@
 
   <body>
     <header class="header">
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-          <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :logo), root_path %>
+      <div class="heading">
+        <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+        
+        <p class="title">my movies collection </p>
+        <p class="title-logo">
+        <%=image_tag("39be9118e271f0256ea4a09c10ba3989.png",class: :image)%>
+        
+        </p>
+      </div>  
+      
+        <div class="navbar">
+          <ul class="nav-lists">
+            <li class="list-status">
+              
+              <span id="current-list"></span>
+            </li>
+            <% if user_signed_in? %>
+            <li class="background-w" id="lists">select▼
+            </li>
+            <%else%>
+            <li class="background-w" id="lists">please login
+            </li>
+            <%end%>
+          </ul>
+          
+          <ul class="show-lists hidden" id="pull-down">
+          <% if user_signed_in? %>  
+            <li class="pull-down-list">
+            <%= link_to "my collection ページ","/users/#{current_user.id}",class: "pull-down-text"%></li>
+            <li class="pull-down-list">
+            <%= link_to "watchリスト ページ","/users/#{current_user.id}/likes",class: "pull-down-text"%></li>
+            <li class="pull-down-list">
+            <%= link_to "movie chat ページ" ,rooms_path,class: "pull-down-text"%></li>
+          <%end%>
+            <li class="pull-down-list">
+            <%= link_to "ホーム画面へ戻る" ,root_path,class: "pull-down-text"%></li>
+            
+          </ul>
+          
+          <div class="login-area">
+
+
           </div>
-          <div class="nav__center"> 
-            <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
-            <%= link_to "movie chat" ,rooms_path, class: "center__text" %><i class="far fa-comment-dots fa-2x"></i>
-          </div>
-          <% if user_signed_in? %>
+        </div>  
+        <div class="login-area">
+        <% if user_signed_in? %>
             <div class="nav__right">
              
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
@@ -31,13 +68,11 @@
           
           <% else %>
             <div class="nav__right"> 
-              
               <%= link_to "ログイン", user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
           <% end %>
         </div>
-      </div>
     </header>
     
     <%= yield %>

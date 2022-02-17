@@ -13,6 +13,7 @@
   padding: 5vh 15vw;
   color: #fff;
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  border-bottom: 7px solid black;
 }
 
 .collection-heading {

@@ -18,9 +18,11 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  font-size: 14px;
+  
 }
 
-li {
+.li {
   list-style: none;
 }
 
@@ -38,28 +40,89 @@ a {
 
 .header {
   background-color: #3b4043;
-  margin-bottom: 0px;
-  padding: 0px 0;
+  height: 60px;
+  display: flex;
+  padding: 0 60px;
+  
+  
+}
+.heading {
+  width: 50%;
+  margin-left: 30px;
+  display: flex;
+}
+
+.title {
+  color: #f5f5f5;
+  height: 100%;
+  padding-top: 15px;
+  
+  text-align:left;
+  font-size: 20px;
+  font-family: 'Corben', cursive;
+}
+.title-logo {
+  width: 20%;
+  
 
 }
-.index__inner {
-  width: 1024px;
-  margin: 0 auto;
+.image {
+  height: 100%;
+  font-size: 20px;
 }
-.nav {
-  width: 100%;
+.navbar {
+  width: 30%;
+  
+}
+li{
+  list-style: none;
+  padding: 20px;
+}  
+.nav-lists {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:flex-start;
+  height: 100%;
+  
+}
+.background-w {
+  background-color:black;
+  color: white;
+}
+.show-lists{
+  width: 200px;
+  position: absolute;
+  right: 370px;
+  top: 70px;
+  background-color: #ffffff;
+}
+
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid darkslategrey;
+  background-color: black;
+  
+}
+.pull-down-text {
+  color: white;
+}
+.list-status{
+  width: 250px;
+  color: #f5f5f5;
+  padding: 0;
+  margin-top: 20px;
+}
+.hidden{
+  display: none;
+}
+.login-area {
   display: flex;
   justify-content: space-between;
-  padding-right: 10%;
-}
-.logo {
-  width: 200px;
-  height: 70px;
-  margin-top: 15px;
-  object-fit: contain;
+  align-items: center;
 }
 .nav__btn{
-  display: inline-block;
+  
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color:#fafbfc;
@@ -90,7 +153,7 @@ a {
   font-family: 'Corben', cursive;
 }
 .nav__right {
-  padding-bottom: 20px;
+  width: 100%;
 
 }
 
@@ -160,14 +223,9 @@ a {
   padding: 15vh 15vw;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  border-bottom: 10px solid black;
 }
 
-.service-title {
-  font-size: 6vh;
-  font-family: 'Corben', cursive;
-  height: inherit;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 2);
-}
 
 .service-explain {
   font-size: 3vh;
@@ -179,7 +237,9 @@ a {
 
 
 .greeting{
+  padding-left: 30px;
   margin-top: 20px;
+  
   font-size: 20px;
 }
 .greeting__link{
@@ -234,9 +294,14 @@ a {
   color: #999;
   text-align: right;
   text-decoration: underline;
-  padding-right: 16px;
+  padding-right: 30px;
 }
 
+.root_logo {
+  
+  height: 15vh;
+}
+  
 /* 詳細ページ */
 .inner {
   display: flex;

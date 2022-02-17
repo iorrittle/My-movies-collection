@@ -4,10 +4,11 @@ class LikesController < ApplicationController
   
 
   def create
+    if user_signed_in?
     @like = current_user.likes.build(like_params)
     @movie = @like.movie
     @like.save
-    
+    end
   end
   
 
