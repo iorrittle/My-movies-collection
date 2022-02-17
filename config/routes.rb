@@ -10,10 +10,9 @@ Rails.application.routes.draw do
   end  
   
   resources :rooms do
-    resources :comments, only: [:index, :create]
+    resources :comments 
+  
   end
-  
-  
   
   resources :users do
     member do

@@ -16,7 +16,18 @@
             <p class="room__list__name"><%= "ジャンル/#{@room.genre.name}  " %></p>
             <p class="room__list__name"><%= "#{@room.public_year.name} 公開作品 " %></p>
           </div>
+      <% if user_signed_in? && current_user.id == 4 %>
+        <div class="movie__manage">
         
+          <div class="movie__btn">
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '編集する', edit_room_path(@room.id), method: :get ,class: "edit-text"%>
+          </div>
+          <div class="movie__btn">
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', room_path(@room.id), method: :delete,class: "edit-text"%>
+          </div>
+        </div>
+      <% end %>
+    
       
       </div>
   </div> 
