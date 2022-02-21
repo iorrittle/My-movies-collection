@@ -71,11 +71,28 @@
   text-decoration-line: underline;
   
  }
-.comment__field {
+
+.new_content {
+  min-height: 35px;
+  max-height: 200px;
+  width: 20VW;
+  height: 35px;
+  resize: vertical;
+  font-size: 16px;
+  
+  
+}  
+::placeholder{ /* Others */
+  color:lightgrey;
   font-size: 20px;
   
+ }
+
+
+.comment__field {
+  font-size: 20px;
+  width: 100%;
   display: flex;
-  justify-content: last baseline;
   padding-top: 50px;
   
 }
@@ -83,7 +100,16 @@
   color: #f5f5f5;
   font-size: 16px;
   background-color: black;
+  width: 60px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
 
+}
+
+.comment__submit:hover {
+  background: #a5d1ec;
 }
 .comennt-date {
   font-size: 8px;
@@ -91,15 +117,26 @@
 
 }
 .content {
-  
-  width: 60vh;
+  width: fit-content;
+  max-width: 60vw;
+  word-wrap: break-word;
   margin-top: 20px;
+  margin-right: 30px;
   background-color: lightblue;
-  font-size: 16px;
+  font-size: 1.3em;
+  border-radius: 7px;
 }
 .delete_title {
-  font-size: 8px;
-  color: rgb(241, 75, 75);
+  font-size: 0.8em;
+  padding-left: 7px;
+  padding-right: 7px;
+  color:whitesmoke;
+  border: solid 0.5px rgb(120, 116, 116);
+  background-color:rgb(120, 116, 116);
+  border-radius: 3px;
 
-
+}
+.delete_title:hover {
+  background-color:rgb(255, 253, 253);
+  color: black;
 }

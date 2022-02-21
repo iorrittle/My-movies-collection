@@ -9,8 +9,9 @@
           <%= comment.content %>
           <%= link_to "#{comment.user.nickname}","/users/#{comment.user.id}", class: :comment_user %>
         </div>
+      </div>  
         <% if comment.user == current_user %>
           <p><%= link_to 'コメントを削除する', room_comment_path(comment.room_id, comment.id), class: "delete_title",method: :delete, remote: true %></p>
         <% end %>
-      </div>
+      
 <% end %>
