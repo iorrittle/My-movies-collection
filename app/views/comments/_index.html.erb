@@ -1,0 +1,16 @@
+<% @comments.each do |comment| %>
+      <div class="content">
+        <div class="comennt-date">
+          投稿日時：<%= comment.created_at %>
+        <%#= link_to post_comment_path(c.post_id, c.id), method: :delete, remote: true, data: {confirm: "削除しますか？"} do %>
+          
+        </div>
+        <div class="comment-content">
+          <%= comment.content %>
+          <%= link_to "#{comment.user.nickname}","/users/#{comment.user.id}", class: :comment_user %>
+        </div>
+        <% if comment.user == current_user %>
+          <p><%= link_to 'コメントを削除する', room_comment_path(comment.room_id, comment.id), class: "delete_title",method: :delete, remote: true %></p>
+        <% end %>
+      </div>
+<% end %>

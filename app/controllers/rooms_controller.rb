@@ -19,7 +19,7 @@ class RoomsController < ApplicationController
   def show 
     @room = Room.find(params[:id])
     @comment = Comment.new
-    @comments = @room.comments.includes(:user)
+    @comments = @room.comments.order(created_at: :desc)
 
   end
   def edit

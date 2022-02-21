@@ -1,0 +1,7 @@
+<%= form_with model: [@room, @comment], url: room_comments_path(@room) do |f|%>
+    <div class="comment__field">
+      <%= f.text_field :content, placeholder:"コメントを入力" ,class:"new_content"%>
+      <%= f.submit '投稿する' ,class:"comment__submit", id: "submit" %><i class="fas fa-pencil-alt"></i>
+      
+    </div>
+<% end %>
