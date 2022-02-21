@@ -4,19 +4,30 @@ class CommentsController < ApplicationController
   
   
   def create
-    @comment = Comment.create(comment_params)
-    if @comment.save
-      redirect_to room_path(@comment.room)  
-  
+    
+    @room = Room.find(params[:room_id])
+    @comments = @room.comments.order(created_at: :desc)
+    @comment = @room.comments.build(comment_params)
+    @comment.user_id = current_user.id
+    if @comment.save(created_at: :desc)
+      
+      render :index
     else
-      @room = @comment.room
-      @comments = @room.comments
-      render "rooms/show" 
+      render :index
     end
-  end
+    
   
-  def show
-  end  
+  end
+  def destroy
+    @room = Room.find(params[:room_id])
+    @comment = Comment.find(params[:id])
+    @comments = @room.comments.order(created_at: :desc)
+
+    @comment.destroy
+      render :index
+
+  end
+
 
   private
   def comment_params

@@ -34,28 +34,17 @@
 
   <div class="chat__area">
     <div class="room__heading__name">Movie chat</div>
-    <%= form_with model: [@room, @comment],　local: true do |f|%>
-    <div class="comment__field">
-      <%= f.text_field :content ,id:"comment__content"%>
-      <%= f.submit '投稿する' ,class:"comment__submit", id: "comment-submit" %><i class="fas fa-pencil-alt"></i>
-      
-    </div>
+    <div class="form_area">
+    <% if user_signed_in? %>
+    <%= render partial: "comments/form", locals: { comment: @comment ,room: @room } %>
     <% end %>
-
-    
+    </div>
+    <div class="comment_area">
+    <%= render partial: "comments/index", locals: { comments: @comments } %>
+    </div>
   
    
-      <% @comments.each do |comment| %>
-      <div class="content">
-        <div class="comennt-date">
-          投稿日時：<%= comment.created_at %>
-        </div>
-        <div class="comment-content">
-          <%= comment.content %>
-          <%= link_to "#{comment.user.nickname}","/users/#{comment.user.id}", class: :comment_user %>
-        </div>
-      </div>
-    <% end %>
+      
     
   </div>
 </div>

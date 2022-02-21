@@ -7,7 +7,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
   has_many :movies
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :likes
   has_many :like_movies, through: :likes, source: :movie
   validates :nickname, presence: true
