@@ -1,11 +1,14 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @rooms = Room.all
   end
   
   def new
     @room = Room.new
-    ld
+    
   end
   
   def create
@@ -20,6 +23,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @comment = Comment.new
     @comments = @room.comments.order(created_at: :desc)
+    
 
   end
   def edit
@@ -47,5 +51,10 @@ class RoomsController < ApplicationController
     params.require(:room).permit(:image, :title, :director, :starring, :genre_id, :public_year_id)
   end
 
+  def move_to_index
+    unless user_signed_in? && current_user.id == 4
+      redirect_to action: :index
+    end
+  end
 
 end

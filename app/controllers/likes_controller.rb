@@ -1,6 +1,5 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!
-  #before_action :movie_find
   
 
   def create
