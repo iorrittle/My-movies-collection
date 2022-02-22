@@ -1,26 +1,18 @@
 <div class="main">
   <div class="session__inner">
     <div class="session__wrapper">
-      <h2 class="login-heading">ユーザー新規登録</h2>
+      <h2 class="login-heading">アカウント情報</h2>
 
         
-        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= form_with model: current_user, local: true do |f| %>
 
         <div class="field">
           <%= f.label :email, "email address" %><br />
           <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
         </div>
-
-        <div class="field">
-          <%= f.label :password, "パスワード（6文字以上）" %><br />
-          <%= f.password_field :password, id:"user_password", autocomplete: "new-password" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password_confirmation, "パスワード再入力" %><br />
-          <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
-        </div>
-
+        
+        
+        
         <div class="field">
           <%= f.label :nickname, "nickname" %><br />
           <%= f.text_field :nickname, id:"user_name" %>
@@ -31,9 +23,16 @@
           <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
         </div>
 
-        
+        <% if user_signed_in? && current_user.id %>　
         <div class="actions">
-          <%= f.submit "新規登録", class: :form__btn  %>
+          <div class="action__link">
+          <%= f.submit "編集する", class: :acount__form__btn  %>
+          </div>
+        
+          <div class="action__link">
+          <%#= link_to "アカウントを削除する" ,user_path(current_user.id),　method: :delete, data: { confirm: 'アカウントを削除しますか？' },class: "un__acount__form__btn" %>
+          </div>
+        <% end %>
         </div>
       <% end %>
     </div>

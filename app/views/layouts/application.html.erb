@@ -47,6 +47,9 @@
             <%= link_to "my collection ページ","/users/#{current_user.id}",class: "pull-down-text"%></li>
             <li class="pull-down-list">
             <%= link_to "watchリスト ページ","/users/#{current_user.id}/likes",class: "pull-down-text"%></li>
+            <li class="pull-down-list">
+            <%= link_to "アカウント",edit_user_path(current_user),class: "pull-down-text"%></li>
+            
           <%end%>
             <li class="pull-down-list">
             <%= link_to "movie chat ページ" ,rooms_path,class: "pull-down-text"%></li>
