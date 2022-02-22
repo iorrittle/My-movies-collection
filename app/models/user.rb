@@ -6,9 +6,9 @@ class User < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
-  has_many :movies
+  has_many :movies ,  dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :like_movies, through: :likes, source: :movie
   validates :nickname, presence: true
   validates :genre_id, numericality: { other_than: 1 } 
