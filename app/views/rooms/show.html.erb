@@ -23,7 +23,7 @@
           <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '編集する', edit_room_path(@room.id), method: :get ,class: "edit-text"%>
           </div>
           <div class="movie__btn">
-          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', room_path(@room.id), method: :delete,class: "edit-text"%>
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', room_path(@room.id), method: :delete,data: { confirm: 'このroomを削除しますか？' },class: "edit-text"%>
           </div>
         </div>
       <% end %>

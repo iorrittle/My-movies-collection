@@ -52,7 +52,7 @@ class RoomsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in? && current_user.id == 4
+    unless user_signed_in? && current_user.admin
       redirect_to action: :index
     end
   end

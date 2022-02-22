@@ -1,15 +1,10 @@
 <div class="rooms-contents">
   <header class="rooms-header">
-    <%#= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-
+    
   </header>
   <div class="rooms-main">
     <h2 class="roooms-title">映画の情報を入力</h2>
     <%= form_with model:@room, url: rooms_path,local: true do |f| %>
-
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
   
     <div class="img-upload">
