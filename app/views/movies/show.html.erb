@@ -61,7 +61,7 @@
           <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '編集する', edit_movie_path(@movie.id), method: :get ,class: "edit-text"%>
           </div>
           <div class="movie__btn">
-          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', movie_path(@movie.id), method: :delete,class: "edit-text"%>
+          <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', movie_path(@movie.id), method: :delete,data: { confirm: 'このmovieを削除しますか？' },class: "edit-text"%>
           </div>
         </div>
       <% end %>

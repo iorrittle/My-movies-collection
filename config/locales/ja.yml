@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        genre_id: 好きな映画のジャンル
+      movie:
+        text: テキスト
+        image: 画像
+        title: 映画のタイトル
+        director: 監督
+        starring: 主演
+        favorite_scene_1: お気に入りのシーン１
+        genre_id: 映画のジャンル
+        public_year_id: 映画の公開年

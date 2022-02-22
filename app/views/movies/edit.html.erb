@@ -1,16 +1,15 @@
 <div class="movies-contents">
   <header class="movies-header">
-    <%#= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    
 
   </header>
   <div class="movies-main">
     <h2 class="movies-title">映画の情報を編集</h2>
     <%= form_with model: @movie, url: movie_path(@movie.id), local: true do |f| %>
 
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
+    
+    <%= render 'shared/error_messages', model: f.object %>
+    
   
     <div class="img-upload">
       <div class="weight-bold-text">

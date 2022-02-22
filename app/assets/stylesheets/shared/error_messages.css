@@ -1,0 +1,15 @@
+.error-alert {
+  display: flex;
+  justify-content:flex-start;
+  margin-bottom: 5vh;
+  
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style:inside;
+  color: rgb(182, 48, 0);
+  text-decoration:underline;
+  font-weight: bolder;
+  background-color:white;
+}
