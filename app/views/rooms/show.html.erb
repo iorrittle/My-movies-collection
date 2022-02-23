@@ -16,7 +16,7 @@
             <p class="room__list__name"><%= "ジャンル/#{@room.genre.name}  " %></p>
             <p class="room__list__name"><%= "#{@room.public_year.name} 公開作品 " %></p>
           </div>
-      <% if current_user.admin? %>
+      <% if user_signed_in? && current_user.admin? %>
         <div class="movie__manage">
         
           <div class="movie__btn">

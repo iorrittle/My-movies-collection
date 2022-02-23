@@ -43,12 +43,16 @@
           
           <ul class="show-lists hidden" id="pull-down">
           <% if user_signed_in? %>  
-            <li class="pull-down-list">
-            <%= link_to "my collection ページ","/users/#{current_user.id}",class: "pull-down-text"%></li>
-            <li class="pull-down-list">
-            <%= link_to "watchリスト ページ","/users/#{current_user.id}/likes",class: "pull-down-text"%></li>
-            <li class="pull-down-list">
-            <%= link_to "アカウント",edit_user_path(current_user),class: "pull-down-text"%></li>
+            <% if current_user.admin?  %>
+              <li class="pull-down-list">
+              <%=link_to "make room", new_room_path ,class: :make__room %></li>
+            <% end %>  
+              <li class="pull-down-list">
+              <%= link_to "my collection ページ","/users/#{current_user.id}",class: "pull-down-text"%></li>
+              <li class="pull-down-list">
+              <%= link_to "watchリスト ページ","/users/#{current_user.id}/likes",class: "pull-down-text"%></li>
+              <li class="pull-down-list">
+              <%= link_to "アカウント",edit_user_path(current_user),class: "pull-down-text"%></li>
             
           <%end%>
             <li class="pull-down-list">
@@ -80,6 +84,7 @@
               <%= link_to "新規登録", new_user_registration_path, class: :else_nav__btn %>
             </div>
           <% end %>
+          
         </div>
     </header>
     

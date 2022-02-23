@@ -107,3 +107,9 @@
 .main {
   background: #f8f8f8;
 }             
+.make__room {
+  color: tomato;
+  font-weight: bolder;
+  text-decoration: underline;
+  
+}

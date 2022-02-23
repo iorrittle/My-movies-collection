@@ -20,6 +20,7 @@ class RoomsController < ApplicationController
   end  
 
   def show 
+    
     @room = Room.find(params[:id])
     @comment = Comment.new
     @comments = @room.comments.order(created_at: :desc)

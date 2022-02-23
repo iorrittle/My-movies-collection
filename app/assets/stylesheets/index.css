@@ -96,7 +96,7 @@ li{
   
 }
 .show-lists{
-  width: 200px;
+  width: 250px;
   position: absolute;
   right: 370px;
   top: 70px;
@@ -284,6 +284,7 @@ li{
 }
 .card__summary {
   font-size: 12px;
+  margin-left: 20px;
 }
 .card__user {
   display: block;
@@ -291,7 +292,7 @@ li{
   color: #999;
   text-align: right;
   text-decoration: underline;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 
 .root_logo {
