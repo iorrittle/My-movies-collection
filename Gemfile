@@ -65,3 +65,5 @@ gem 'font-awesome-sass'
 gem "aws-sdk-s3", require: false
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'rails_admin', '~> 2.0.0.beta'
+gem 'cancancan'
