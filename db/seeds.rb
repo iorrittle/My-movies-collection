@@ -11,3 +11,12 @@ user = User.create!(email: "machu@machu",
   nickname:  "saku",
   genre_id: 6,
   admin: true)
+
+  #Room.create!(
+    #title: "ノマドランド",
+    #director: "クロエ・ジャオ",
+    #starring: "フランシス・マクドーマンド",
+    #genre_id: 7,
+    #public_year_id: 16,
+  #)
+  
