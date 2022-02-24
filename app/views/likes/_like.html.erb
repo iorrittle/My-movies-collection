@@ -1,14 +1,13 @@
-<%# unless movie.user_id == current_user.id %>
-  <%# if @like.present? %>
-  <% if user_signed_in? && current_user != movie.user %>
-    <% if current_user.like_find(movie.id) %>    
-      <div class="unlike-btn">
-        <%= link_to "watchリストから削除", destroy_like_path(movie.id), method: :delete, class: "btn-danger" , remote: true %>
-      </div>
-    <% else %>
-      <div class="like-btn">
-        <i class="fas fa-bowling-ball fa-2x"></i><%= link_to "watchリストへ", movie_likes_path(movie.id), method: :post, class:"btn btn-primary like-btn", remote: true  %>
-      </div>
-    <% end %>
+
+<% if user_signed_in? && current_user != movie.user %>
+  <% if current_user.like_find(movie.id) %>    
+    <div class="unlike-btn">
+      <%= link_to "watchリストから削除", destroy_like_path(movie.id), method: :delete, class: "btn-danger" , remote: true %>
+    </div>
+  <% else %>
+    <div class="like-btn">
+      <i class="fas fa-bowling-ball fa-2x"></i><%= link_to "watchリストへ", movie_likes_path(movie.id), method: :post, class:"btn btn-primary like-btn", remote: true  %>
+    </div>
+  <% end %>
 
 <% end %>

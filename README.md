@@ -32,8 +32,6 @@
 | artist_name          | string    |                               |
 | memorandum           | text      | null:false                    |
 
-
-
 ### Association
 - belongs_to :user
 - has_many :comments
@@ -50,3 +48,31 @@
 ### Association
 - belongs_to :user
 - belongs_to :movie
+
+
+
+## likes テーブル
+
+| Column               | Type      | Options                       |
+| -------------------- | --------- | ----------------------------- |
+| movie                | reference | null:false, foreign_key: true |
+| user                 | reference | null:false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :movie
+
+
+
+## rooms テーブル
+
+| Column               | Type      | Options                       |
+| -------------------- | --------- | ----------------------------- |
+| title                | string    | null:false                   |
+| director             | string    | null:false                    |
+| starring             | string    | null:false                    |
+| genre_id             | integer   | null:false                    |
+| public_year_id       | integer   | null:false                    |
+
+### Association
+- has_many :comments  

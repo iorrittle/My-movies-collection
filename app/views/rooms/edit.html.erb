@@ -1,6 +1,6 @@
 <div class="rooms-contents">
   <header class="rooms-header">
-    <%#= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    
 
   </header>
   <div class="rooms-main">
@@ -8,7 +8,7 @@
     <%= form_with model:@room, url: "/rooms/#{@room.id}", local: true do |f| %>
 
     
-    <%# render 'shared/error_messages', model: f.object %>
+    <% render 'shared/error_messages', model: f.object %>
     
 
   
@@ -65,7 +65,7 @@
         <%= f.collection_select(:public_year_id, PublicYear.all, :id, :name, {}, {class:"select-box", id:"room-public-year"}) %>
         
       </div>
-      <%#　感想　%>
+      
       
       
     </div>    

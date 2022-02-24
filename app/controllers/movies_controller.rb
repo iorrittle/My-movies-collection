@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :move_to_index, only: [:edit, :update]
-
+  before_action :set_movie, only: [:show, :edit, :update, :destroy]
   def index
     @movies = Movie.all
     
@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
   end  
 
   def show
-    @movie = Movie.find(params[:id])
+    
     if user_signed_in?
       @like = current_user.likes.find_by(movie_id: @movie.id)
       @likes = @movie.likes.includes(:user)
@@ -29,14 +29,13 @@ class MoviesController < ApplicationController
   end  
 
   def edit
-    @movie = Movie.find(params[:id])
+    
     unless current_user
       return redirect_to root_path
     end  
   end
   
   def update
-    @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
       redirect_to movie_path(@movie.id)
     else 
@@ -45,7 +44,6 @@ class MoviesController < ApplicationController
   end  
   
   def destroy
-    @movie = Movie.find(params[:id])
     @movie.destroy
     redirect_to root_path
   end
@@ -63,4 +61,10 @@ class MoviesController < ApplicationController
       redirect_to action: :index
     end
   end
+
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end  
 end
+
+

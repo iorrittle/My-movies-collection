@@ -1,7 +1,7 @@
 <%= form_with model: [@room, @comment], url: room_comments_path(@room) do |f|%>
     <div class="comment__field">
       <%= f.text_area :content, placeholder:"コメントを入力" ,class:"new_content"%>
-      <%= f.submit 'post▶︎' ,class:"comment__submit", id: "submit" %>
+      <%= f.submit 'post ▶︎' ,class:"comment__submit", id: "submit" %>
       
     </div>
 <% end %>
