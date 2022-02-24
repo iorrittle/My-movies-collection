@@ -57,10 +57,10 @@
       <% if user_signed_in? && current_user.id == @movie.user_id %>
         <div class="movie__manage">
         
-          <div class="movie__btn">
+          <div class="edit__movie__btn">
           <i class="fas fa-bowling-ball "></i><%= link_to '編集する', edit_movie_path(@movie.id), method: :get ,class: "edit-text"%>
           </div>
-          <div class="movie__btn">
+          <div class="delete__movie__btn">
           <i class="fas fa-bowling-ball fa-2x"></i><%= link_to '削除する', movie_path(@movie.id), method: :delete,data: { confirm: 'このmovieを削除しますか？' },class: "edit-text"%>
           </div>
         </div>
