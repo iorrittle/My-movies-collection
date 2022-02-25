@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:likes]
-
+  
+  
   def likes
     likes = Like.where(user_id: @user.id).pluck(:movie_id)
     @like_movies = Movie.find(likes)
@@ -40,5 +41,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:nickname, :email ,:genre_id)
   end
-
+  
+  
 end
