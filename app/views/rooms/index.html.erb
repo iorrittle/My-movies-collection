@@ -1,13 +1,26 @@
-
-  
-  
-　<div class="main">
-    <div class="index__inner">
-      <div class="card__wrapper">
-        <%= render partial: "rooms/room", collection: @rooms %>
-      </div>
-    </div>
-    
-    
-    
+<div class="main">
+  <div class='room-image-area'>
+    <div class="rooms-heading">
+      <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+      <%= "movie chat" %>
+    </div>  
+    <p class='rooms-service-explain'>
+    　Let's click on the movie!!
+    </p>  
+    <p class='rooms-service-explain'>
+      
+    </p>
   </div>
+</div>
+  
+  
+<div class="r-main">
+<div class="denger">※チャット内容はネタバレを含む場合がございます。</div>
+  <div class="index__inner">
+    <div class="card__wrapper">
+      <%= render partial: "rooms/room", collection: @rooms %>
+    </div>
+  </div>
+    
+    
+</div>

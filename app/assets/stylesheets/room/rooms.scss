@@ -1,6 +1,41 @@
 /* border-bottom: 1px solid #eee; */
 
+/*index 帯*/
+.room-image-area {
+  width: 100vw;
+  height: 300px;
+  background-image:  url('publicdomainq-0051016qgx.jpg')!important;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+}
 
+.rooms-heading {
+  width: calc(100vh - 100px);
+  min-height: 30%;
+  font-size: 40px;
+  font-family: 'Corben', cursive;
+  margin-bottom: 20px;
+  
+}
+
+.rooms-service-explain {
+  font-size: 25px;
+  line-height: 40px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 3);
+  
+}
+/*index 帯*/
 .rooms-contents {
   background-color: #f5f5f5;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
@@ -30,9 +65,15 @@
   text-align: center;
 }
 
+.denger {
+  margin-left: 20px;
+  text-decoration: underline;
+}
 
-
-
+.r-main {
+  background-image:  url('polonez_car.png')!important;
+  
+}             
 
 
 

@@ -34,7 +34,7 @@
 
   <div class="chat__area">
     <div class="room__heading__name">Movie chat</div>
-  
+    
     <div class="form_area">
     <% if user_signed_in? %>
     <%= render partial: "comments/form", locals: { comment: @comment ,room: @room } %>

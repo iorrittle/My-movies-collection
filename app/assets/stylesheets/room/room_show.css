@@ -2,7 +2,7 @@
 .chat__main {
   display: flex;
   justify-content: space-between;
-  
+  background-image:  url('polonez_car.png')!important;
   
 }
 

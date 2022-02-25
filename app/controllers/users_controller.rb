@@ -9,11 +9,13 @@ class UsersController < ApplicationController
   
   
   def show
+    @user = @user = User.find(params[:id])
     if user_signed_in? 
       @nickname = current_user.nickname
-      @movies = current_user.movies
+      @movies = Movie.includes(:user)
+      
     end
-      @user = @user = User.find(params[:id])
+      
     
   end
   

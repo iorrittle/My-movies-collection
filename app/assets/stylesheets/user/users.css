@@ -1,7 +1,8 @@
 /* リセットCSS */
 /* ユーザーページ */
 .collection-inner {
-  min-height: calc(100vh - 430px);
+  width: 100vw;
+  height: 310px;
   display: flex;
   justify-content: space-around;
   

@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
   
   def index
-    @rooms = Room.all
+    @rooms = Room.all.order(public_year_id: "ASC")
   end
   
   def new
