@@ -21,7 +21,7 @@
         
         <p class="title">my movies collection </p>
         <p class="title-logo">
-        <%=image_tag("39be9118e271f0256ea4a09c10ba3989.png",class: :image)%>
+        <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: "image"), root_path %>
         
         </p>
       </div>  
@@ -31,7 +31,9 @@
             <li class="list-status">
               
               <span id="current-list"></span>
-              こんにちは、<%="#{current_user.nickname}"%>さん
+              <% if user_signed_in?%>
+              <a>こんにちは、<%="#{current_user.nickname}"%>さん</a>
+              <%end%>
             </li>
             <% if user_signed_in? %>
             <li class="background-w" id="lists">select ▼
