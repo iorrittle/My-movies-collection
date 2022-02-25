@@ -55,9 +55,10 @@ my movies collection
 ・[チャット機能はjQueryで実装し、非同期通信処理がされている。](https://i.gyazo.com/53bb94bc8d718b56de41a910f44bf65b.gif)
 ## 管理者権限　
 
-・[「movie chat　ページ」の映画（チャットルーム）は管理者のみ、追加・編集・削除ができる。](https://i.gyazo.com/821e5a23cddc5151b80ffc9bbde8671e.jpg)  
+・「movie chat　ページ」の映画（チャットルーム）は管理者のみ、追加・編集・削除ができる。  
 （映画（チャットルーム）の重複を避けるため）　　
-[![Image from Gyazo](https://i.gyazo.com/821e5a23cddc5151b80ffc9bbde8671e.jpg)](https://gyazo.com/821e5a23cddc5151b80ffc9bbde8671e)
+[![Image from Gyazo](https://i.gyazo.com/821e5a23cddc5151b80ffc9bbde8671e.jpg)](https://gyazo.com/821e5a23cddc5151b80ffc9bbde8671e)  
+[![Image from Gyazo](https://i.gyazo.com/e486fe679b0b37e718df1c97d24913b0.jpg)](https://gyazo.com/e486fe679b0b37e718df1c97d24913b0)
 ・管理者権限は gem（ rails_admin'~> 2.0.0.beta、 cancancan）をインストールし、seedsファイルに記述したのち  
 ’rails db seeds’で付与した。  
   
