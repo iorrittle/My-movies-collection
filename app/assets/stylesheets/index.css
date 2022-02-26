@@ -243,6 +243,10 @@ li{
   text-decoration: underline;
   color: #999;
 }
+.greeting__link:hover {
+  color: lightsteelblue;
+
+}
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
@@ -284,6 +288,11 @@ li{
   color:#3b4043;
   padding-left: 20px;
 }
+
+.card__title:hover {
+  color:lightsteelblue;
+
+}
 .card__summary {
   font-size: 12px;
   margin-left: 20px;
@@ -297,6 +306,10 @@ li{
   padding-right: 60px;
 }
 
+.card__user:hover {
+  color: lightsteelblue;
+
+}
 .root_logo {
   
   height: 15vh;
