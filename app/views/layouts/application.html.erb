@@ -32,7 +32,7 @@
         
         <div class="login-area">
           <% if user_signed_in? %>
-            <div class="hello">Hello,<%="#{current_user.nickname}"%>!</div>
+            <div class="hello">Hello,<%="#{current_user.nickname}"%></div>
             <div class="nav__btn">
               <i class="fas fa-compact-disc fa-2x"></i>   <%= link_to "Up Movie", new_movie_path %>
             </div>
