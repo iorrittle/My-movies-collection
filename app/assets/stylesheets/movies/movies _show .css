@@ -193,3 +193,52 @@
 
 }
 
+/* スマホ表示 */
+@media (max-width: 599px) {
+  .inner {
+   display: block; 
+    
+  }
+  .movie__left__wrapper {
+    width: 100%;
+    
+  }
+  .image__cover {
+    padding-left: 0%;
+  }
+  .movie__info {
+    width: 100%;
+    padding: 0;
+  }
+  .new_content {
+    width: 100vw;
+
+  }
+  .comment__field {
+    display: block;
+    
+  }
+
+  .list__name {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

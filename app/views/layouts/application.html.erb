@@ -16,25 +16,33 @@
 
   <body>
     <header class="header">
+      
+      
       <div class="heading">
         <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
         
-        <p class="title">my movies collection </p>
+        <div class="title">my movies collection </div>
+        
         <p class="title-logo">
         <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: "image"), root_path %>
         
         </p>
+        
       </div>  
-      
+        
+        <div class="login-area">
+          <% if user_signed_in? %>
+            <div class="hello">Hello,<%="#{current_user.nickname}"%>!</div>
+            <div class="nav__btn">
+              <i class="fas fa-compact-disc fa-2x"></i>   <%= link_to "Up Movie", new_movie_path %>
+            </div>
+          <%end%>  
+        </div>
         <div class="navbar">
           <ul class="nav-lists">
-            <li class="list-status">
-              
-              <span id="current-list"></span>
-              <% if user_signed_in?%>
-              <a>こんにちは、<%="#{current_user.nickname}"%>さん</a>
-              <%end%>
-            </li>
+            
+            
+    
             <% if user_signed_in? %>
             <li class="background-w" id="lists">select ▼
             </li>
@@ -43,52 +51,45 @@
             </li>
             <%end%>
           </ul>
-          
+        </div> 
+        
+        <div class="navbar">  
           <ul class="show-lists hidden" id="pull-down">
-          <% if user_signed_in? %>  
-            <% if current_user.admin?  %>
+            <% if user_signed_in? %>  
+              <% if current_user.admin?  %>
               <li class="pull-down-list">
               <%=link_to "make room", new_room_path ,class: :make__room %></li>
-            <% end %>  
+              <% end %>  
               <li class="pull-down-list">
               <%= link_to "my collection ページ","/users/#{current_user.id}",class: "pull-down-text"%></li>
               <li class="pull-down-list">
               <%= link_to "watchリスト ページ","/users/#{current_user.id}/likes",class: "pull-down-text"%></li>
+            <%end%>  
+              <li class="pull-down-list">
+              <%= link_to "movie chat ページ" ,rooms_path,class: "pull-down-text"%></li>
+              <li class="pull-down-list">
+              <%= link_to "ホーム画面へ戻る" ,root_path,class: "pull-down-text"%></li>
+          
+          
+            <% unless user_signed_in? %>
+              <li class="pull-down-list">
+              <%= link_to "新規登録", new_user_registration_path, class: "pull-down-text" %></li>
+              <li class="pull-down-list">
+              <%= link_to "ログイン", user_session_path,class: "pull-down-text"%></li>
+            <% else %>
               <li class="pull-down-list">
               <%= link_to "アカウント",edit_user_path(current_user),class: "pull-down-text"%></li>
-            
-          <%end%>
-            <li class="pull-down-list">
-            <%= link_to "movie chat ページ" ,rooms_path,class: "pull-down-text"%></li>
-            <li class="pull-down-list">
-            <%= link_to "ホーム画面へ戻る" ,root_path,class: "pull-down-text"%></li>
-            
+              <li class="pull-down-list">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <%end%>
+              
           </ul>
-          
-          <div class="login-area">
-
-
-          </div>
         </div>  
-        <div class="login-area">
-        <% if user_signed_in? %>
-            <div class="nav__right">
-              <div class="nav__logout">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-              </div>
-              <div class="nav__btn">
-              <i class="fas fa-compact-disc fa-2x"></i>   <%= link_to "Up Movie", new_movie_path %>
-              </div>
-            </div>
           
-          <% else %>
-            <div class="nav__right"> 
-              <%= link_to "ログイン", user_session_path, class: :else_nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :else_nav__btn %>
-            </div>
-        <% end %>
-          
+         
+        
         </div>
+        
     </header>
     
     <%= yield %>
