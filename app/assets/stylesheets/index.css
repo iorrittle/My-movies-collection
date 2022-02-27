@@ -37,171 +37,6 @@ a {
   font-size: 1.2em;
 }
 
-/* ヘッダー */
-
-.header {
-  background-color: #3b4043;
-  height: 70px;
-  display: flex;
-  padding: 0 60px;
-  
-  
-}
-.heading {
-  width: 50%;
-  margin-left: 30px;
-  display: flex;
-}
-
-.title {
-  color: #f5f5f5;
-  height: 100%;
-  padding-top: 15px;
-  text-align:left;
-  font-size: 1.5em;
-  font-family: 'Corben', cursive;
-}
-.title-logo {
-  width: 20%;
-  
-
-}
-.image {
-  height: 90%;
-  padding-top: 5px;
-  font-size: 20px;
-}
-.navbar {
-  width: 30%;
-  
-}
-li{
-  list-style: none;
-  padding: 20px;
-}  
-.nav-lists {
-  margin: 0;
-  
-  display: flex;
-  justify-content:flex-start;
-  height: 100%;
-  
-}
-.background-w {
-  background-color:black;
-  color: white;
-  text-align: center;
-  width: fit-content;
-  font-size: 1rem;
-  
-}
-.show-lists{
-  width: 250px;
-  position: absolute;
-  right: 370px;
-  top: 70px;
-  background-color: #ffffff;
-}
-
-.pull-down-list{
-  padding: 15px 35px 15px 15px;
-  border: 1px solid darkslategrey;
-  background-color: black;
-  
-}
-.pull-down-text {
-  color: white;
-}
-.list-status{
-  width: 200px;
-  color: #f5f5f5;
-  padding: 0;
-  margin-top: 30px;
-}
-.hidden{
-  display: none;
-}
-.login-area {
-  display: flex;
-  text-align: center;
-  align-items:center;
-  justify-content:space-evenly;
-  width: 30%;
-  
-  
-}
-.nav__btn{
-  background-color: rgba(237, 76, 36, 0.934);
-  padding: 0.6em 1.4em;
-  
-  font-size: 0.9em;
-  color: black;
-  text-decoration: none;
-  user-select: none;
-  border: 1px solid black ;
-  text-align: center;
-  transition: 0.4s ease;
-  font-weight: bolder;
-}
-.nav__btn:hover{
-  
-  background-color: #3385a9d9;
-}
-.nav__logout{
-  
-  display: inline-block;
-  padding-top: 15px;
-  margin-right: 20px;
-  font-size: 0.8em;
-  font-weight: bolder;
-  text-decoration: none;
-  user-select: none;
-  
-  
-  
-}
-.nav__logout:hover{
-  opacity: 0.3;
-}
-.nav__center {
-  width: 60vh;
-  text-align: center;
-  padding-top: 30px;
-}
-.fa-comment-dots {
-  color: #f5f5f5;
-
-}
-.center__text {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Corben', cursive;
-}
-.nav__right {
-  
-  display: flex;
-  justify-content: center;
-  
-}
-.else_nav__btn {
-  
-  padding: 0.6em 1.4em;
-  margin-right: 20px;
-  font-size: 0.9em;
-  color: #f5f5f5;
-  text-decoration: none;
-  user-select: none;
-  border: 1px solid black ;
-  text-align: center;
-  transition: 0.4s ease;
-  background-color: #3993bad9;;
-  border-radius: 3px;
-}
-.else_nav__btn:hover {
-  background-color: whitesmoke;
-  color: #3b4043;
-}
 
 
 /*帯*/
@@ -380,10 +215,14 @@ li{
   color: #fff;
   font-size: 10px;
 }
-
+.nav {
+  display: none;
+}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
+  
+  
   .inner {
     width: 90%;
     margin: 0 auto;
@@ -402,26 +241,78 @@ li{
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    width: 120px;
+  
+  
+  
+  .hello {
+    visibility:hidden; 
   }
-  .page-heading {
-    font-size: 20px;
+  .title {
+    white-space: nowrap;
+    
   }
-  .card {
+  .show-lists{
+    
+    left: 300px;
+   
+  }
+  
+  .title-logo {
+    display:none;
+  }
+  .nav__btn {
+    max-height: 50px;
+    white-space: nowrap;
+  }
+  .image-area {
     width: 100%;
-    margin-bottom: 60px;
+    padding-left: 39%;
+    background: url('unnamed.jpg') no-repeat;
+    
+    height: 320px;
+    
   }
-  .card__title {
-    font-size: 18px;
+  .service-explain {
+    font-size: 17px;
+    height: 120px;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  .greeting {
+   height: 25px;
+   display: flex;
+   justify-content: space-around;
+  }
+  .greeting__link {
+    height: 10px;
+  }
+  .watch__list {
+    height: 10px;
+  }
+  
+  .card__body {
+    height: 100px;
+    
   }
   .card__summary {
-    font-size: 14px;
+    visibility:hidden; 
   }
-  .movie_image{
-    width: 100%;
+  .card__user {
+    text-align: start;
+    margin-left: 10px ;
   }
-  .table{
-    width: 100%;
+  .background-w {
+    white-space: nowrap;
   }
+  
+  
+  
+  
+  
+  
 }

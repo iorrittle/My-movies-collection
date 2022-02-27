@@ -5,7 +5,7 @@
   height: 310px;
   display: flex;
   justify-content: space-around;
-  
+  min-height: calc(100vh - 430px);
   text-align: left;
   background: url('unnamed.jpg');
   background-size: cover;
@@ -23,6 +23,7 @@
   font-size: 30px;
   font-family: 'Corben', cursive;
   padding-left: 30px;
+
 }
 
 
@@ -109,7 +110,7 @@
 .form__btn:hover {
   color: #fff;
   background: #a5d1ec;
-
+  
 }
 .field{
   margin: 10px 0;

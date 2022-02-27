@@ -144,3 +144,36 @@
   background-color:rgb(255, 253, 253);
   color: black;
 }
+
+/* スマホ表示 */
+@media (max-width: 599px) {
+  .rooms-heading {
+    margin: 0px;
+    height: 25%;
+    text-align:justify;
+  }
+  .room__left__wrapper {
+    width: 100%;
+
+  }
+  .room__image__cover {
+    padding: 0;
+ }
+  
+  .chat__main {
+    display: block;
+  }
+ 
+  .chat__area {
+    height: 100%;
+
+  }
+  
+  .new_content {
+    width: 80vw;
+  }
+}
+
+
+
+
