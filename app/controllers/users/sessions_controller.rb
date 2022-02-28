@@ -18,6 +18,7 @@ class Users::SessionsController < Devise::SessionsController
         sign_in user
         redirect_to root_path
       else
+        flash[:alert] = "メールアドレスまたはパスワードが間違っています"
         redirect_to new_user_session_path
       end 
     end   
