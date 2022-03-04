@@ -64,22 +64,9 @@
   padding-left: 20px;
 }
 
-.question {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: #0099e8;
-  color: #FFF;
-  font-size: 13px;
-  text-align: center;
-  line-height: 20px;
-  text-decoration: none;
-  margin-left: 5px;
-}
 
-.question-text {
-  display: flex;
-}
+
+
 
 /* /共通 */
 
@@ -236,3 +223,15 @@
 .inc {
   font-size: 13px;
 }
+ /* スマホ表示 */
+ @media (max-width: 520px) {
+  .movies-main {
+  
+    
+    
+    
+    padding: 5vh 10vw;
+  }
+  
+
+ }  

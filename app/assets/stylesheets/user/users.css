@@ -14,16 +14,14 @@
   padding: 5vh 15vw;
   color: #fff;
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
-  border-bottom: 7px solid black;
 }
 
 .collection-heading {
-  width: calc(100vh - 100px);
-  min-height: 30%;
-  font-size: 30px;
+  width: 100%;
+  font-size: 25px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
   font-family: 'Corben', cursive;
-  padding-left: 30px;
-
+  
 }
 
 

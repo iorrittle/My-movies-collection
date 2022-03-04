@@ -19,18 +19,19 @@
       
       
       <div class="heading">
+        
         <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
         
         <div class="title">my movies collection </div>
         
-        <p class="title-logo">
-        <%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: "image"), root_path %>
         
-        </p>
         
       </div>  
         
         <div class="login-area">
+        
+        
+       
           <% if user_signed_in? %>
             <div class="hello">Hello,<%="#{current_user.nickname}"%></div>
             <div class="nav__btn">
@@ -38,6 +39,7 @@
             </div>
           <%end%>  
         </div>
+        
         <div class="navbar">
           <ul class="nav-lists">
             
@@ -80,7 +82,7 @@
               <li class="pull-down-list">
               <%= link_to "アカウント",edit_user_path(current_user),class: "pull-down-text"%></li>
               <li class="pull-down-list">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "pull-down-logout" %></li>
             <%end%>
               
           </ul>

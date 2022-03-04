@@ -1,0 +1,33 @@
+/* スマホ表示 */
+@media (max-width: 520px) {
+
+  .purchase-btn {
+  color: black;
+  width: 120px;
+  background-color: rgba(237, 76, 36, 0.934);
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  border: 4px solid black ;
+  font-weight: bolder;
+  }
+  .purchase-btn:hover {
+  background-color: #3385a9d9!important;
+  }
+  .purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  }
+
+}
+ 
+
+
+
+   

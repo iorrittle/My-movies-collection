@@ -8,6 +8,8 @@
     <p class='service-explain'>
       「movie chat」で作品に対する熱い思いをつぶやいてみませんか？
     </p>
+    <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+    
   </div>
   <div class="main">
     <div class="index__inner">
@@ -31,3 +33,9 @@
     </div>
   </div>
 </div>  
+
+<%= link_to(new_movie_path, class: 'purchase-btn') do %>
+  
+  <i class="fas fa-compact-disc fa-2x"></i><span class='purchase-btn-text'>Up Movie</span>
+  
+<%end %>
