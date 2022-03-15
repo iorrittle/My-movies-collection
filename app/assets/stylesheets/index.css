@@ -41,7 +41,7 @@ a {
 
 /*帯*/
 .image-area {
-  width: 100%;
+  width: 100vw;
   height: 41vh;
   background: url('unnamed.jpg')!important;
   background-size: cover;
@@ -99,7 +99,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   min-height: calc(100vh - 161px);
-  margin-top: 20px;
+  
   
 }
 .card {
@@ -113,6 +113,7 @@ a {
   height: 250px;
   width: 250px;
   margin: 20px;
+  padding-top: 10px;
 }
 .card__title {
   display: block;
@@ -263,9 +264,10 @@ a {
     
     
     
-    height: 39vh;
+    height: 37vh;
     
   }
+  
   .service-explain {
     font-size: 14px;
     width: 50vw;

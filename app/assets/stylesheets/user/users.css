@@ -1,29 +1,52 @@
 /* リセットCSS */
 /* ユーザーページ */
-.collection-inner {
+/*.main-heading{
+  height: 41vh;
+  
+  
+}
+.collection__inner {
   width: 100vw;
-  height: 310px;
-  display: flex;
-  justify-content: space-around;
-  min-height: calc(100vh - 430px);
+  height: 100%;
+  
   text-align: left;
   background: url('unnamed.jpg');
-  background-size: cover;
+  
+  
   background-position: top ;
-  flex-direction: column;
-  padding: 5vh 15vw;
-  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
   border-bottom: 10px solid black;
-}
+}*/
 
 .collection-heading {
   width: 100%;
   font-size: 25px;
   font-family: 'Corben', cursive;
+  padding-top: 20px;
+  padding-left: 20px;
+  height: 7vh;
+  background: url('ep_naturalwhite.png');
+}
+.likes-heading {
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Corben', cursive;
+  padding-top: 20px;
+  padding-left: 20px;
+  height: 7vh;
   
 }
-
+.show__card__wrapper {
+  background: url('ep_naturalwhite.png');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
 
 .user__card {
   display: flex;
@@ -133,3 +156,15 @@
   text-decoration: underline;
   
 }
+/* スマホ表示 */
+@media (max-width: 520px) {
+  
+  .collection-heading {
+    
+    padding-left: 20px;
+    
+    
+  }
+
+
+}  

@@ -22,10 +22,10 @@
 
 .rooms-heading {
   width: calc(100vh - 100px);
-  min-height: 30%;
+  
   font-size: 40px;
   font-family: 'Corben', cursive;
-  margin-bottom: 20px;
+  
   
 }
 
@@ -67,6 +67,7 @@
 
 .denger {
   margin-left: 20px;
+  height: 7vh;
   text-decoration: underline;
 }
 
@@ -257,4 +258,14 @@
 
 .inc {
   font-size: 13px;
+} 
+/* スマホ表示 */
+@media (max-width: 520px) {
+  .rooms-heading {
+    
+    height: 10vh;
+  }  
+
+
 }
+
