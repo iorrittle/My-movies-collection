@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   
   
   def show
+    @movies = Movie.includes(:user)
     @user = @user = User.find(params[:id])
     if user_signed_in? 
       @nickname = current_user.nickname

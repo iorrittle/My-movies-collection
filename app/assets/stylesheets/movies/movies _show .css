@@ -205,6 +205,8 @@
   }
   .image__cover {
     padding-left: 0%;
+    height: 50%;
+    max-height: 85%;
   }
   .movie__info {
     width: 100%;

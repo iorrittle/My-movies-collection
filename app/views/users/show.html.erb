@@ -1,15 +1,37 @@
-<div class="main">
+<div class="show__main">
+  
+     
+   
+  <header class="movies-header">
+    
+
+  </header>
+    
+    <span><%= link_to image_tag("39be9118e271f0256ea4a09c10ba3989.png", class: :root_logo), root_path %></span>
+    
+    
     <div class="collection-heading">
         <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
-        <%= "#{@user.nickname}'s  collection" %>
+        <%= "#{@user.nickname}'s movies collection" %>
     </div>
-    <div class="index__inner">
-     
-      <div class="show__card__wrapper">
-        <%= render partial: "movies/movie", collection: @user.movies %>
-      </div>
-    </div>
+  <div class="main-inner">  
+    <div class="show__card__wrapper">
+      <% @user.movies.each do |movie| %>
+      
+        <div class="show__card">
+          <%= link_to image_tag(movie.image.variant(resize: '500x300'), class: :show__card__img ), movie_path(movie.id)%>
+          <div class="card__body">
+            <%= link_to "#{movie.title}", movie_path(movie.id), class: :show__card__title%>
     
+    
+    
+     
+          </div>
+        </div>
+      
+      <% end %>
+    </div>
+  </div>
     
 </div>    
     

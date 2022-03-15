@@ -154,10 +154,12 @@
   }
   .room__left__wrapper {
     width: 100%;
-
+    
   }
   .room__image__cover {
     padding: 0;
+    height: 50%;
+    max-height: 85%;
  }
   
   .chat__main {

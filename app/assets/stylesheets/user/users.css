@@ -20,16 +20,76 @@
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
   border-bottom: 10px solid black;
 }*/
+.movies-header {
+  padding: 2vh 0;
+  text-align: center;
+}
 
+
+.show__main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url('whitediamond.png')!important;
+}
+.main-inner {
+  width: 80vw;
+  
+  display: flex;
+  
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10px;
+  background-color:black!important;
+}
 .collection-heading {
-  width: 100%;
+  
   font-size: 25px;
   font-family: 'Corben', cursive;
-  padding-top: 20px;
-  padding-left: 20px;
-  height: 7vh;
-  background: url('ep_naturalwhite.png');
+  text-align: center;
+  height: 5vh;
+  
 }
+
+.show__card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+  min-width: 100%;
+  
+}
+.show__card {
+  width: calc((100% - 40px) / 4);
+  
+  margin-bottom: 40px;
+  padding-top: 40px;
+  
+}
+.show__card__title {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-decoration-line: underline;
+  color: #f8f8f8;
+  padding-left: 15px;
+}
+
+.show__card__img {
+  margin-bottom: 16px;
+  object-fit: contain;
+  height: 250px;
+  width: 250px;
+  margin: 5px;
+  
+  
+}
+.show__card__img:hover {
+  transform: perspective(500px) translateZ(150px);
+}
+
 .likes-heading {
   width: 100%;
   font-size: 25px;
@@ -39,14 +99,9 @@
   height: 7vh;
   
 }
-.show__card__wrapper {
-  background: url('ep_naturalwhite.png');
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  min-height: calc(100vh - 161px);
-}
+
+  
+
 
 .user__card {
   display: flex;
@@ -158,13 +213,19 @@
 }
 /* スマホ表示 */
 @media (max-width: 520px) {
-  
-  .collection-heading {
-    
-    padding-left: 20px;
+  .show__card {
+    width: calc((100% - 5px) / 2);
+    margin-bottom: 0px;
     
     
   }
-
-
+  .show__card__img {
+    margin-left: 15px;
+    width: 80%;
+    
+    
+  }
+  .root_logo {
+    margin-left: 50px;
+  }
 }  
