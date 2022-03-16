@@ -16,9 +16,9 @@
             <p class="list__name"><%= "ジャンル/#{@movie.genre.name}  " %></p>
             <p class="list__name"><%= "#{@movie.public_year.name} 公開作品 " %></p>
           
-            
+          <div id="like_buttons_<%= @movie.id %>">
             <%= render partial: 'likes/like', locals: {movie: @movie} %>
-            
+          </div>
           </div>
       </div>
     </div> 
