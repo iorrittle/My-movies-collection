@@ -66,8 +66,6 @@ a {
 }
 
 /* メイン */
-
-
 .greeting{
   padding-left: 30px;
   margin-top: 20px;
@@ -82,25 +80,17 @@ a {
   color: lightsteelblue;
 
 }
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
-  padding-left: 10%;
-}
-.card__body {
-  padding-left: 40px;
-  margin-bottom: 20px;
-
-
-}
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   min-height: calc(100vh - 161px);
-  
-  
+} 
+/*render部分*/
+.card__body {
+  padding-left: 40px;
+  margin-bottom: 20px;
 }
 .card {
   width: calc((100% - 50px) / 4);
@@ -146,64 +136,10 @@ a {
   color: lightsteelblue;
 
 }
-.root_logo {
-  
-  height: 15vh;
-}
-  
+/*不要と思われる部分を削除*/
 
+/* ?*/ 
 
-.edit-text {
-  color: #fff;
-  padding-left: 5px;
-
-}
-.favorite-scene {
-  display: flex;
-  
-  justify-content: space-around;
-  padding-bottom: 10px;
- 
-
-}
-.movie__comments {
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
-}
-
-.comments_lists {
-  padding-left: 20px;
-}
-
-.comments_list {
-  list-style-type: square;
-  padding-bottom: 7px;
-}
-
-.comment_user {
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
-}
-.input {
-  
-  font-size: 12px;
-  color:  #fff;
-  text-decoration: none;
-  
-  border: 1px #999 solid;
-  border-radius: 3px;
-  
-  
-  text-align: center;
-  background-color: black;
-  
-}
-.input:hover {
-  color: #fff;
-  background: #999;
-}
 
 /* フッター */
 
@@ -226,9 +162,6 @@ a {
     width: 90%;
     margin: 0 auto;
   }
-  .page-heading {
-    font-size: 24px;
-  }
   .card {
     width: 48%;
     margin-bottom: 40px;
@@ -241,16 +174,12 @@ a {
  /* スマホ表示 */
 @media (max-width: 520px) {
   
-  
-  
   .hello {
     visibility:hidden; 
   }
   
   .show-lists{
-    
     left: 45%;
-   
   }
   
   .title {
@@ -261,9 +190,6 @@ a {
   }
   .image-area {
     width: 100%;
-    
-    
-    
     height: 37vh;
     
   }
@@ -274,12 +200,6 @@ a {
     text-align: center;
     margin-left: 120px;
   }
-  
-  
-  
-  
-  
-  
   .greeting {
    height: 25px;
    display: flex;
