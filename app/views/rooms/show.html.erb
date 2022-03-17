@@ -13,7 +13,7 @@
             
             <p class="room__list__name"><%= "#{@room.director} / 監督" %></p>
             <p class="room__list__name"><%= "#{@room.starring} / 主演" %></p>
-            <p class="room__list__name"><%= "ジャンル/#{@room.genre.name}  " %></p>
+            <p class="room__list__name"><%= "#{@room.genre.name}  " %></p>
             <p class="room__list__name"><%= "#{@room.public_year.name} 公開作品 " %></p>
           </div>
       <% if user_signed_in? && current_user.admin? %>

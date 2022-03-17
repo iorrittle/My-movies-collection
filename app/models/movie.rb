@@ -3,6 +3,7 @@ class Movie < ApplicationRecord
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
+  belongs_to :sub_genre
   belongs_to :public_year
   has_many :likes, dependent: :destroy
   has_many :likes_users, through: :likes, source: :user
@@ -15,6 +16,7 @@ class Movie < ApplicationRecord
   validates :favorite_scene_1, presence: true
 
   validates :genre_id, numericality:{ other_than: 1, message: "を選択してください" }
+  
   validates :public_year_id, numericality:{ other_than: 1, message: "を選択してください"}
   
   def liked_by(user)

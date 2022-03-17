@@ -57,7 +57,14 @@
           映画のジャンル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %>
+        <div class="genre__feild">
+          <tr><%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %></tr>
+        <div class="weight-bold-text">  
+          サブジャンル
+          <span class="any">任意</span>
+        </div>  
+          <tr><%= f.collection_select(:sub_genre_id, SubGenre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %></tr>
+        </div>
         <div class="weight-bold-text">
           映画の公開年
           <span class="indispensable">必須</span>
@@ -74,18 +81,21 @@
         <%= f.text_area :favorite_scene_1, class:"movies-text", id:"movie-favorite-scene" %>
         <div class="weight-bold-text">
           お気に入りシーン No.2
+          <span class="any">任意</span>
         </div>
         <%= f.text_area :favorite_scene_2, class:"movies-text", id:"movie-favorite-scene" %>
         <div class="weight-bold-text">
           お気に入りシーン No.3
+          <span class="any">任意</span>
         </div>
         <%= f.text_area :favorite_scene_3, class:"movies-text", id:"movie-favorite-scene" %>
       </div> 
     </div>    
-      <div class="film-music">
+      <div class="">
         <div class="film-music-title">
-          イチオシしの映画音楽
+          イチオシしの映画音楽<span class="any">任意</span>
         </div>
+        
       <h5> タイトル</h5>
         <%= f.text_area :film_music, class:"film-music-text", id:"movie-music-title" %>
       <h5> アーティスト</h5>

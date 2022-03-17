@@ -6,6 +6,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string     :director,    null: false
       t.string     :starring,    null: false
       t.integer    :genre_id,    null: false
+      t.integer    :sub_genre_id
       t.integer    :public_year_id,  null: false
       t.text       :favorite_scene_1, null: false
       t.text       :favorite_scene_2

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
+
   has_many :movies ,  dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
