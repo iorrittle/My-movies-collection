@@ -56,14 +56,7 @@
           映画のジャンル
           <span class="indispensable">必須</span>
         </div>
-        <div class="genre__feild">
-          <tr><%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %></tr>
-        <div class="weight-bold-text">  
-          サブジャンル
-          <span class="any">任意</span>
-        </div>  
-          <tr><%= f.collection_select(:sub_genre_id, SubGenre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %></tr>
-        </div>
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"movie-genre"}) %>
         <div class="weight-bold-text">
           映画の公開年
           <span class="indispensable">必須</span>
