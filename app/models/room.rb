@@ -3,6 +3,7 @@ class Room < ApplicationRecord
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
+  
   belongs_to :public_year
   
   validates :title ,presence: true

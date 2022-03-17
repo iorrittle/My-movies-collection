@@ -39,7 +39,10 @@
   
   height: 15vh;
 }
-
+.film-music-title{
+  width: 25%;
+  white-space: nowrap;
+}
 
 /* 共通 */
 .indispensable {
@@ -51,6 +54,16 @@
   font-size: 12px;
   font-weight: bold;
   
+}
+.any {
+  background-color: lightslategray;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 .weight-bold-text {
