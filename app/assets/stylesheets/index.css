@@ -205,6 +205,7 @@ a {
    height: 25px;
    display: flex;
    justify-content: space-around;
+   padding: 0;
   }
   .greeting__link {
     height: 10px;

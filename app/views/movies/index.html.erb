@@ -16,11 +16,10 @@
       <%if user_signed_in? %>
       <div class="greeting"> 
           <div class="current_user">
-          <%= "Hello" %>
-          <%= link_to "#{current_user.nickname}","/users/#{current_user.id}" , class: :greeting__link%>
+          <%= link_to "#{current_user.nickname}","/users/#{current_user.id}" , class: :greeting__link%><%="'s movies collection"%>
           </div>
           <div class="watch__list">
-          <%= link_to "#{current_user.nickname}'s watchリスト","/users/#{current_user.id}/likes",class: :greeting__link%>
+          <%= link_to "#{current_user.nickname}","/users/#{current_user.id}/likes",class: :greeting__link%><%="'s watchリスト"%>
           </div>
       </div> 
       <% end %>
