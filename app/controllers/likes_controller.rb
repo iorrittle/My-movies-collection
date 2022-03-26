@@ -15,6 +15,7 @@ class LikesController < ApplicationController
     @movie = Movie.find(params[:id])
     like = Like.find_by(user_id: current_user.id, movie_id: params[:id])
     like.destroy
+      
     
   end
   private

@@ -17,6 +17,5 @@ class User < ApplicationRecord
     likes.where(movie_id: movie_id).exists?
   end
   
-  
 
 end
