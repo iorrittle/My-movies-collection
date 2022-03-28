@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     likes = Like.where(user_id: @user.id).pluck(:movie_id)
     @like_movies = Movie.find(likes)
     
+      
   end
   
   
